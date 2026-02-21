@@ -16,6 +16,7 @@ import {
   getWikipediaFoodInfo,
 } from './externalApiService.js';
 import { lookupNutrition } from '../data/nutritionReference.js';
+import { inferManualNutritionProfile } from './manualFallbackService.js';
 
 const foods = db.collection(COLLECTIONS.FOODS);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -92,6 +93,16 @@ export const enrichFoodNutrition = async (foodId) => {
       console.warn(`USDA lookup failed for "${query}": ${err.message}`);
       if (err.message.includes('429')) disableUsda();
     }
+  }
+
+  // 4. Manual fallback profile for traditional dishes not found in product databases
+  if (!nutrition) {
+    nutrition = inferManualNutritionProfile({
+      name: food.name,
+      tags: food.tags || [],
+      categories: food.categories || [],
+    });
+    source = 'pantrypal-manual-profile';
   }
 
   if (!nutrition) return null;
@@ -240,8 +251,10 @@ export const bulkEnrichFromWikipedia = async ({ dryRun = false } = {}) => {
   const docs = [];
   snapshot.forEach((doc) => docs.push({ id: doc.id, ...doc.data() }));
 
-  const needsEnrichment = docs.filter((d) => !d.description || d.description.length < 20);
-  console.log(`📖 ${needsEnrichment.length}/${docs.length} foods need Wikipedia enrichment`);
+  const needsEnrichment = docs.filter(
+    (d) => !d.description || d.description.length < 20 || !d.imageUrl
+  );
+  console.log(`📖 ${needsEnrichment.length}/${docs.length} foods need Wikipedia enrichment (description/image)`);
 
   for (let i = 0; i < needsEnrichment.length; i++) {
     const food = needsEnrichment[i];

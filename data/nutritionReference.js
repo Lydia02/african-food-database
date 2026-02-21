@@ -9,6 +9,8 @@
  * like Open Food Facts.
  */
 
+import { LOCAL_REFERENCE_OVERRIDES } from './localReferenceOverrides.js';
+
 /**
  * Nutrition data per 100g serving.
  * Keys are lowercased food names for matching.
@@ -578,6 +580,20 @@ export const NUTRITION_REFERENCE = {
   },
 };
 
+export const ALL_NUTRITION_REFERENCE = {
+  ...NUTRITION_REFERENCE,
+  ...LOCAL_REFERENCE_OVERRIDES,
+};
+
+const normalizeFoodName = (value = '') => value
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/\(.*?\)/g, '')
+  .replace(/[^a-z0-9\s-]/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+
 /**
  * Look up nutrition from the local reference.
  * Tries exact match first, then partial/fuzzy match.
@@ -585,27 +601,31 @@ export const NUTRITION_REFERENCE = {
  * @returns {object|null} — nutrition data or null if not found
  */
 export const lookupNutrition = (foodName) => {
-  const normalized = foodName
-    .toLowerCase()
-    .replace(/\(.*?\)/g, '')
-    .trim();
+  const normalized = normalizeFoodName(foodName);
+
+  const entries = Object.entries(ALL_NUTRITION_REFERENCE).map(([key, data]) => ({
+    key,
+    data,
+    normalizedKey: normalizeFoodName(key),
+  }));
 
   // 1. Exact match
-  if (NUTRITION_REFERENCE[normalized]) {
-    return { ...NUTRITION_REFERENCE[normalized], source: 'pantrypal-reference' };
+  const exactMatch = entries.find(({ normalizedKey }) => normalizedKey === normalized);
+  if (exactMatch) {
+    return { ...exactMatch.data, source: 'pantrypal-reference' };
   }
 
   // 2. Check if any key is contained in the food name
-  for (const [key, data] of Object.entries(NUTRITION_REFERENCE)) {
-    if (normalized.includes(key) || key.includes(normalized)) {
+  for (const { normalizedKey, data } of entries) {
+    if (normalized.includes(normalizedKey) || normalizedKey.includes(normalized)) {
       return { ...data, source: 'pantrypal-reference' };
     }
   }
 
   // 3. Check individual words (for compound names like "Nigerian Jollof Rice")
   const words = normalized.split(/\s+/);
-  for (const [key, data] of Object.entries(NUTRITION_REFERENCE)) {
-    const keyWords = key.split(/\s+/);
+  for (const { normalizedKey, data } of entries) {
+    const keyWords = normalizedKey.split(/\s+/);
     // If all key words appear in the food name
     if (keyWords.every((kw) => words.some((w) => w === kw || w.includes(kw)))) {
       return { ...data, source: 'pantrypal-reference' };

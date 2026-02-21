@@ -27,7 +27,12 @@
     "enrich:dry-run": "node migrations/enrichAll.js --dry-run",
     "discover": "node migrations/importDiscoveries.js",
     "discover:import": "node migrations/importDiscoveries.js --import",
-    "discover:import:safe": "node migrations/importDiscoveries.js --import --min-confidence=70 --limit=30"
+    "discover:import:safe": "node migrations/importDiscoveries.js --import --min-confidence=70 --limit=30",
+    "reference:sync": "node migrations/generateLocalReferenceOverrides.js",
+    "nutrition:fill:local": "node migrations/fillNutritionFromLocalReference.js",
+    "categories:fix": "node migrations/fixFoodCategories.js",
+    "images:fix": "node migrations/fixMissingImages.js",
+    "backfill:manual": "node migrations/backfillMissingFoodData.js"
   },
   "keywords": ["african-food", "recipes", "pantrypal", "firebase"],
   "author": "Lydia",
