@@ -32,6 +32,9 @@
     "nutrition:fill:local": "node migrations/fillNutritionFromLocalReference.js",
     "categories:fix": "node migrations/fixFoodCategories.js",
     "images:fix": "node migrations/fixMissingImages.js",
+    "images:cache": "node migrations/validateAndFixImages.js --save-cache --dry-run",
+    "images:validate": "node migrations/validateAndFixImages.js",
+    "images:validate:dry": "node migrations/validateAndFixImages.js --dry-run --use-cache",
     "backfill:manual": "node migrations/backfillMissingFoodData.js"
   },
   "keywords": ["african-food", "recipes", "pantrypal", "firebase"],
