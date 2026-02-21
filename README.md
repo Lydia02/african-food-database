@@ -1,470 +1,934 @@
-# PantryPal — African Food Database API 🍲🌍
+# African Food Database API
 
-A comprehensive REST API featuring **358+ traditional African dishes** from all **54 African countries** — complete with nutrition data, images, descriptions, and smart search. Built with Express 5 and Firebase.
+A comprehensive REST API for African cuisine — covering foods, recipes, nutrition, countries, regions, and ethnic groups across all 54 African nations. Built with **Node.js / Express** and **Firebase Firestore**.
 
-## Live Demo
-
-> **Base URL**: `https://african-food-database-production.up.railway.app`
+> **Live Base URL**: `https://african-food-database-production.up.railway.app`
 >
 > Try it: `GET https://african-food-database-production.up.railway.app/api/foods?limit=5`
 
 ---
 
-## Features
+## Table of Contents
 
-- **358+ African foods** with nutrition, images, and descriptions
-- **54 countries** represented across all African regions
-- **Smart search** with fuzzy matching (Levenshtein distance), autocomplete, and ingredient search
-- **Nutrition enrichment** via 3-tier pipeline: local reference → OpenFoodFacts → USDA
-- **Wikipedia discovery** — automatically finds and imports new African dishes
-- **Community food requests** — users can request missing dishes
-- **Image upload** to Firebase Storage
-- **Rate limiting** and security via Helmet + CORS
-
----
-
-## Quick Start
-
-### Prerequisites
-
-- **Node.js** 18+
-- **Firebase project** with Firestore enabled
-- **USDA API key** (free: [signup here](https://fdc.nal.usda.gov/api-key-signup.html))
-
-### Installation
-
-```bash
-git clone https://github.com/your-username/african-food-database.git
-cd african-food-database
-npm install
-```
-
-### Environment Variables
-
-Create a `.env` file:
-
-```env
-# Server
-PORT=3000
-NODE_ENV=development
-
-# Firebase
-FIREBASE_PROJECT_ID=your-project-id
-FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
-FIREBASE_SERVICE_ACCOUNT_PATH=./config/serviceAccountKey.json
-
-# USDA FoodData Central API Key
-USDA_API_KEY=your-usda-api-key
-```
-
-Place your Firebase service account JSON at `./config/serviceAccountKey.json`.
-
-### Seed the Database
-
-```bash
-# Seed countries first, then all food regions
-npm run seed:countries
-npm run seed:all-regions
-
-# Seed additional food collections
-npm run seed:street
-npm run seed:everyday
-
-# Enrich foods with nutrition data
-npm run enrich:nutrition
-```
-
-### Run the Server
-
-```bash
-# Development (hot reload)
-npm run dev
-
-# Production
-npm start
-```
-
-Server starts at `http://localhost:3000`.
+- [Base URL](#base-url)
+- [Authentication](#authentication)
+- [Rate Limiting](#rate-limiting)
+- [Response Format](#response-format)
+- [Foods](#foods)
+- [Search](#search)
+- [Countries](#countries)
+- [Regions](#regions)
+- [Tribes / Ethnic Groups](#tribes--ethnic-groups)
+- [Food Requests](#food-requests)
+- [External Data & Enrichment](#external-data--enrichment)
+- [Data Models](#data-models)
+- [Error Codes](#error-codes)
+- [Running Locally](#running-locally)
+- [Quick Start Examples](#quick-start-examples)
 
 ---
 
-## API Endpoints
+## Base URL
 
-### Health & Info
+```
+https://african-food-database-production.up.railway.app/api
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/` | API info + available endpoints |
-| `GET` | `/api/health` | Health check |
+Local development:
 
-### Foods (10 endpoints)
+```
+http://localhost:3000/api
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/foods` | List all foods (pagination: `?page=1&limit=20`) |
-| `GET` | `/api/foods/:id` | Get food by ID |
-| `GET` | `/api/foods/featured` | Get featured foods |
-| `GET` | `/api/foods/students` | Budget-friendly student meals |
-| `GET` | `/api/foods/professionals` | Quick professional meals |
-| `GET` | `/api/foods/country/:countryId` | Foods by country |
-| `GET` | `/api/foods/tribe/:tribeId` | Foods by tribe |
-| `POST` | `/api/foods` | Create a food |
-| `PUT` | `/api/foods/:id` | Update a food |
-| `DELETE` | `/api/foods/:id` | Delete a food |
+Confirm the API is live:
 
-### Search (3 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/search?q=jollof` | Smart fuzzy search |
-| `GET` | `/api/search/autocomplete?q=fu` | Autocomplete suggestions |
-| `GET` | `/api/search/ingredient?q=plantain` | Search by ingredient |
-
-### Countries (6 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/countries` | List all 54 countries |
-| `GET` | `/api/countries/:id` | Get country by ID |
-| `GET` | `/api/countries/code/:code` | Get country by ISO code (e.g., `NG`) |
-| `POST` | `/api/countries` | Create a country |
-| `PUT` | `/api/countries/:id` | Update a country |
-| `DELETE` | `/api/countries/:id` | Delete a country |
-
-### Regions (6 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/regions` | List all regions |
-| `GET` | `/api/regions/:id` | Get region by ID |
-| `GET` | `/api/regions/country/:countryId` | Regions by country |
-| `POST` | `/api/regions` | Create a region |
-| `PUT` | `/api/regions/:id` | Update a region |
-| `DELETE` | `/api/regions/:id` | Delete a region |
-
-### Tribes (6 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/tribes` | List all tribes |
-| `GET` | `/api/tribes/:id` | Get tribe by ID |
-| `GET` | `/api/tribes/country/:countryId` | Tribes by country |
-| `POST` | `/api/tribes` | Create a tribe |
-| `PUT` | `/api/tribes/:id` | Update a tribe |
-| `DELETE` | `/api/tribes/:id` | Delete a tribe |
-
-### Food Requests (6 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/food-requests` | List all community requests |
-| `GET` | `/api/food-requests/top` | Most requested foods |
-| `GET` | `/api/food-requests/stats` | Request analytics |
-| `POST` | `/api/food-requests` | Submit a new request |
-| `PATCH` | `/api/food-requests/:id/status` | Update request status |
-| `DELETE` | `/api/food-requests/:id` | Delete a request |
-
-### Upload (2 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/upload` | Upload single image |
-| `POST` | `/api/upload/multiple` | Upload multiple images (max 10) |
-
-### External / Enrichment (15 endpoints)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/external/search?q=fufu` | Search across all external APIs |
-| `GET` | `/api/external/search/openfoodfacts?q=...` | Search OpenFoodFacts |
-| `GET` | `/api/external/search/usda?q=...` | Search USDA FoodData Central |
-| `GET` | `/api/external/search/spoonacular?q=...` | Search Spoonacular |
-| `GET` | `/api/external/product/:barcode` | Lookup by barcode |
-| `GET` | `/api/external/nutrition/:foodId` | Get nutrition for a food |
-| `GET` | `/api/external/discover` | Discover missing dishes from Wikipedia |
-| `GET` | `/api/external/discover/wikipedia/:category` | Discover by category |
-| `GET` | `/api/external/discover/wikipedia/info/:title` | Get Wikipedia info |
-| `POST` | `/api/external/discover/import` | Import a discovered dish |
-| `POST` | `/api/external/discover/import/bulk` | Bulk import dishes |
-| `POST` | `/api/external/enrich/:foodId/nutrition` | Enrich one food's nutrition |
-| `POST` | `/api/external/enrich/:foodId/wikipedia` | Enrich from Wikipedia |
-| `POST` | `/api/external/enrich/bulk/nutrition` | Bulk nutrition enrichment |
-| `POST` | `/api/external/enrich/bulk/wikipedia` | Bulk Wikipedia enrichment |
-
-> **Total: 53 endpoints**
-
----
-
-## Example Requests
-
-### Search for a food
-
-```bash
-curl "https://your-api.com/api/search?q=jollof+rice"
+```
+GET https://african-food-database-production.up.railway.app/
 ```
 
 ```json
 {
   "success": true,
-  "count": 3,
-  "results": [
-    {
-      "id": "abc123",
-      "name": "Jollof Rice",
-      "description": "A beloved West African one-pot rice dish...",
-      "imageUrl": "https://upload.wikimedia.org/...",
-      "nutritionInfo": {
-        "calories": 230,
-        "protein": "5.2g",
-        "carbs": "38g",
-        "fat": "7.1g"
-      }
-    }
-  ]
+  "message": "African Food Database API 🍲",
+  "version": "1.0.0",
+  "endpoints": {
+    "countries": "/api/countries",
+    "regions": "/api/regions",
+    "tribes": "/api/tribes",
+    "foods": "/api/foods",
+    "search": "/api/search",
+    "foodRequests": "/api/food-requests",
+    "external": "/api/external"
+  }
 }
 ```
+
+Health check:
+
+```
+GET /api/health
+```
+
+---
+
+## Authentication
+
+The API is currently **open** — no API key is required.
+
+---
+
+## Rate Limiting
+
+| Window | Max Requests |
+|--------|-------------|
+| 15 minutes | 100 requests per IP |
+
+When exceeded:
+
+```json
+{
+  "success": false,
+  "error": "Too many requests, please try again later."
+}
+```
+
+---
+
+## Response Format
+
+All endpoints return a consistent JSON envelope:
+
+```json
+{
+  "success": true,
+  "data": { }
+}
+```
+
+Errors:
+
+```json
+{
+  "success": false,
+  "error": "Descriptive error message"
+}
+```
+
+Paginated list responses include:
+
+```json
+{
+  "success": true,
+  "data": {
+    "items": [ ],
+    "page": 1,
+    "limit": 20,
+    "total": 358
+  }
+}
+```
+
+---
+
+## Foods
+
+### List all foods
+
+```
+GET /api/foods
+```
+
+**Query parameters**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `page` | integer | `1` | Page number |
+| `limit` | integer | `20` | Results per page (max 100) |
+| `countryId` | string | — | Filter by country ID |
+| `tribeId` | string | — | Filter by tribe / ethnic group ID |
+| `category` | string | — | Filter by category e.g. `lunch`, `street food`, `traditional` |
+| `targetAudience` | string | — | `university-students` or `young-professionals` |
+| `difficulty` | string | — | `easy`, `medium`, or `hard` |
+| `search` | string | — | Keyword filter on food name |
+
+**Example**
+
+```
+GET /api/foods?category=street+food&countryId=NG001&limit=10
+```
+
+---
+
+### Get a single food
+
+```
+GET /api/foods/:id
+```
+
+Returns the full record including ingredients, step-by-step instructions, and nutrition info.
+
+**Example**
+
+```
+GET /api/foods/jollof_rice_NG001
+```
+
+---
+
+### Featured foods
+
+```
+GET /api/foods/featured
+```
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | `10` | Number of results |
+
+---
+
+### Foods for university students
+
+```
+GET /api/foods/students
+```
+
+Budget-friendly, easy-to-cook dishes tagged `university-students`.
+
+| Parameter | Type | Default |
+|-----------|------|---------|
+| `page` | integer | `1` |
+| `limit` | integer | `20` |
+
+---
+
+### Foods for young professionals
+
+```
+GET /api/foods/professionals
+```
+
+Quick, high-quality meals tagged `young-professionals`.
+
+| Parameter | Type | Default |
+|-----------|------|---------|
+| `page` | integer | `1` |
+| `limit` | integer | `20` |
+
+---
+
+### Foods by country
+
+```
+GET /api/foods/country/:countryId
+```
+
+**Example**
+
+```
+GET /api/foods/country/NG001?limit=30
+```
+
+---
+
+### Foods by tribe
+
+```
+GET /api/foods/tribe/:tribeId
+```
+
+**Example**
+
+```
+GET /api/foods/tribe/yoruba_001
+```
+
+---
+
+### Create a food
+
+```
+POST /api/foods
+Content-Type: application/json
+```
+
+**Required fields**
+
+```json
+{
+  "name": "Jollof Rice",
+  "countryId": "NG001",
+  "description": "A classic West African one-pot rice dish cooked in a rich tomato sauce."
+}
+```
+
+See the [Food model](#food) for all available fields.
+
+---
+
+### Update a food
+
+```
+PUT /api/foods/:id
+Content-Type: application/json
+```
+
+Send only the fields you want to change. All other fields are preserved.
+
+---
+
+### Delete a food
+
+```
+DELETE /api/foods/:id
+```
+
+---
+
+## Search
+
+### Smart fuzzy search
+
+```
+GET /api/search?q=jollof
+```
+
+Handles typos, partial names, and alternate spellings. If a query returns zero matches it is automatically logged in the food requests queue.
+
+**Query parameters**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `q` | string | **required** | Search query (min 2 characters) |
+| `page` | integer | `1` | Page number |
+| `limit` | integer | `20` | Results per page |
+| `category` | string | — | Narrow to a category |
+| `region` | string | — | Narrow to a region e.g. `West Africa` |
+| `countryId` | string | — | Narrow to a country |
+| `minScore` | integer | `30` | Minimum fuzzy match score (0–100) |
+
+**Example**
+
+```
+GET /api/search?q=egusi&region=West+Africa&limit=5
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "data": {
+    "items": [ ],
+    "totalMatches": 3,
+    "page": 1,
+    "limit": 5,
+    "requestLogged": false
+  }
+}
+```
+
+> `requestLogged: true` means the query had zero results and was saved for the team to review.
+
+---
 
 ### Autocomplete
 
-```bash
-curl "https://your-api.com/api/search/autocomplete?q=fu&limit=5"
 ```
+GET /api/search/autocomplete?q=eg
+```
+
+Lightweight name suggestions for search inputs.
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `q` | string | **required** | Partial query (min 2 characters) |
+| `limit` | integer | `10` | Max suggestions |
+
+**Example response**
 
 ```json
 {
   "success": true,
-  "suggestions": ["Fufu", "Fufu & Light Soup", "Ful Medames", "Funge", "Fufu (Congolese)"]
+  "data": ["Egusi Soup", "Egunsi", "Egusi and Fufu"]
 }
-```
-
-### Get all foods (paginated)
-
-```bash
-curl "https://your-api.com/api/foods?page=1&limit=10"
 ```
 
 ---
 
-## Data Model
+### Search by ingredient
 
-### Food Document
+```
+GET /api/search/ingredient?q=tomato
+```
 
-```javascript
+Returns every food that contains the specified ingredient.
+
+| Parameter | Type | Default |
+|-----------|------|---------|
+| `q` | string | **required** (min 2 chars) |
+| `page` | integer | `1` |
+| `limit` | integer | `20` |
+
+---
+
+## Countries
+
+### List all countries
+
+```
+GET /api/countries
+```
+
+Returns all 54 African countries in the database.
+
+---
+
+### Get country by ID
+
+```
+GET /api/countries/:id
+```
+
+---
+
+### Get country by ISO code
+
+```
+GET /api/countries/code/:code
+```
+
+**Example**
+
+```
+GET /api/countries/code/NG   → Nigeria
+GET /api/countries/code/GH   → Ghana
+GET /api/countries/code/ET   → Ethiopia
+```
+
+---
+
+### Create / Update / Delete
+
+```
+POST   /api/countries
+PUT    /api/countries/:id
+DELETE /api/countries/:id
+```
+
+---
+
+## Regions
+
+African regions: West Africa, East Africa, North Africa, Central Africa, Southern Africa.
+
+### List all regions
+
+```
+GET /api/regions
+```
+
+---
+
+### Regions by country
+
+```
+GET /api/regions/country/:countryId
+```
+
+---
+
+### Get region by ID
+
+```
+GET /api/regions/:id
+```
+
+---
+
+### Create / Update / Delete
+
+```
+POST   /api/regions
+PUT    /api/regions/:id
+DELETE /api/regions/:id
+```
+
+---
+
+## Tribes / Ethnic Groups
+
+### List all tribes
+
+```
+GET /api/tribes
+```
+
+---
+
+### Tribes by country
+
+```
+GET /api/tribes/country/:countryId
+```
+
+**Example**
+
+```
+GET /api/tribes/country/NG001
+```
+
+---
+
+### Get tribe by ID
+
+```
+GET /api/tribes/:id
+```
+
+---
+
+### Create / Update / Delete
+
+```
+POST   /api/tribes
+PUT    /api/tribes/:id
+DELETE /api/tribes/:id
+```
+
+---
+
+## Food Requests
+
+Community-driven queue. When a user searches for a dish that does not exist, the query is auto-logged here for the team to review and add.
+
+### List all requests
+
+```
+GET /api/food-requests
+```
+
+---
+
+### Most requested foods
+
+```
+GET /api/food-requests/top
+```
+
+Foods most frequently searched but not yet in the database — useful for prioritising what to add next.
+
+---
+
+### Request analytics
+
+```
+GET /api/food-requests/stats
+```
+
+---
+
+### Submit a food request manually
+
+```
+POST /api/food-requests
+Content-Type: application/json
+```
+
+```json
 {
-  name: "Jollof Rice",
-  localName: "Jolof",
-  aliases: ["Benachin", "Ceebu Jen"],
-  description: "A beloved West African one-pot rice dish...",
-  countryId: "nigeria",
-  countryName: "Nigeria",
-  region: "Nationwide",
-  categories: ["traditional", "lunch", "dinner"],
-  imageUrl: "https://...",
-  ingredients: ["rice", "tomatoes", "onions", "pepper", "spices"],
-  nutritionInfo: {
-    calories: 230,
-    protein: "5.2g",
-    carbs: "38g",
-    fat: "7.1g",
-    fiber: "1.8g",
-    sodium: "420mg"
-  },
-  nutritionSource: "pantrypal-reference",
-  difficulty: "medium",
-  prepTime: 20,
-  cookTime: 60,
-  servings: 6,
-  tags: ["rice", "one-pot", "party"],
-  isFeatured: false,
-  rating: 0,
-  viewCount: 0,
-  createdAt: "2026-02-20T...",
-  updatedAt: "2026-02-21T..."
+  "query": "Suya spice blend",
+  "region": "West Africa",
+  "countryHint": "NG"
 }
 ```
 
 ---
 
-## Nutrition Enrichment Pipeline
-
-Foods are enriched through a 3-tier waterfall:
+### Update request status *(admin)*
 
 ```
-1. PantryPal Local Reference (instant)
-   └── ~150+ curated African food entries
-   └── Exact match → substring match → word match
+PATCH /api/food-requests/:id/status
+Content-Type: application/json
+```
 
-2. OpenFoodFacts API (free, no rate limit)
-   └── Packaged food database
-   └── Best for commercially available items
-
-3. USDA FoodData Central (1000 req/hr with API key)
-   └── Most comprehensive nutrition database
-   └── Circuit breaker: auto-disables on rate limit
+```json
+{ "status": "fulfilled" }
 ```
 
 ---
 
-## CLI Scripts
-
-| Script | Description |
-|--------|-------------|
-| `npm start` | Start production server |
-| `npm run dev` | Start dev server (hot reload) |
-| `npm test` | Run tests with coverage |
-| `npm run seed:countries` | Seed 54 African countries |
-| `npm run seed:all-regions` | Seed all regional foods |
-| `npm run seed:street` | Seed 42 street foods |
-| `npm run seed:everyday` | Seed 37 everyday foods |
-| `npm run enrich:nutrition` | Enrich all foods with nutrition data |
-| `npm run enrich:wikipedia` | Enrich foods from Wikipedia |
-| `npm run discover` | Discover new dishes (dry run) |
-| `npm run discover:import:safe` | Import top discoveries (confidence >70) |
-
----
-
-## Project Structure
+### Delete a request
 
 ```
-african-food-database/
-├── app.js                    # Express app entry point
-├── package.json
-├── .env                      # Environment variables
-├── config/
-│   ├── firebase.js           # Firebase Admin SDK init
-│   ├── constants.js          # App constants
-│   └── serviceAccountKey.json
-├── models/
-│   ├── Food.js               # Food schema + validation
-│   ├── Country.js            # Country schema
-│   ├── Region.js             # Region schema
-│   ├── Tribe.js              # Tribe schema
-│   ├── FoodRequest.js        # Food request schema
-│   └── index.js
-├── controllers/
-│   ├── foodController.js     # Food CRUD handlers
-│   ├── countryController.js  # Country handlers
-│   ├── regionController.js   # Region handlers
-│   ├── tribeController.js    # Tribe handlers
-│   ├── uploadController.js   # Image upload handlers
-│   └── externalController.js # External API handlers
-├── services/
-│   ├── foodService.js        # Food business logic
-│   ├── countryService.js     # Country business logic
-│   ├── searchService.js      # Fuzzy search engine
-│   ├── enrichmentService.js  # Nutrition enrichment pipeline
-│   ├── externalApiService.js # USDA, OFF, Wikipedia clients
-│   ├── discoveryService.js   # Wikipedia food discovery
-│   ├── uploadService.js      # Firebase Storage uploads
-│   └── foodRequestService.js # Food request logic
-├── routes/
-│   ├── foodRoutes.js
-│   ├── countryRoutes.js
-│   ├── searchRoutes.js
-│   ├── externalRoutes.js
-│   └── ... (8 route files)
-├── middleware/
-│   ├── errorHandler.js       # Global error handler
-│   ├── validate.js           # Request validation
-│   └── index.js
-├── data/
-│   └── nutritionReference.js # 150+ African food nutrition data
-└── migrations/
-    ├── seed.js               # Base seeder
-    ├── seedCountries.js      # 54 countries
-    ├── seedNigerianFoods.js  # 58 Nigerian foods
-    ├── seedWestAfricanFoods.js
-    ├── seedEastAfricanFoods.js
-    ├── seedNorthAfricanFoods.js
-    ├── seedSouthernAfricanFoods.js
-    ├── seedCentralAfricanFoods.js
-    ├── seedFoodCombos.js
-    ├── seedStreetFood.js     # 42 street foods
-    ├── seedEverydayFood.js   # 37 everyday foods
-    ├── enrichAll.js          # Bulk enrichment runner
-    └── importDiscoveries.js  # Wikipedia import CLI
+DELETE /api/food-requests/:id
 ```
 
 ---
 
-## Deployment
+## External Data & Enrichment
 
-### Option 1: Railway (Recommended — Free Tier)
+Admin-facing utilities for pulling data from third-party sources (OpenFoodFacts, USDA, Spoonacular, Wikipedia) and enriching existing records.
+
+### Unified external search
+
+```
+GET /api/external/search?q=jollof+rice
+```
+
+Queries all connected external APIs in a single call.
+
+---
+
+### Search individual sources
+
+```
+GET /api/external/search/openfoodfacts?q=egusi&page=1&pageSize=10
+GET /api/external/search/usda?q=fufu&pageSize=5
+GET /api/external/search/spoonacular?q=tagine&number=5
+```
+
+---
+
+### Product lookup by barcode
+
+```
+GET /api/external/product/:barcode
+```
+
+Looks up a packaged product by EAN/UPC barcode via OpenFoodFacts.
+
+---
+
+### Get nutrition details for an existing food
+
+```
+GET /api/external/nutrition/:foodId
+```
+
+---
+
+### Discover missing foods from Wikipedia
+
+```
+GET /api/external/discover?depth=2&maxResults=100
+```
+
+Scans Wikipedia African-food categories for dishes not yet in the database.
+
+---
+
+### Discover by Wikipedia category
+
+```
+GET /api/external/discover/wikipedia/:category?depth=1&maxResults=50
+```
+
+---
+
+### Import a single discovered dish
+
+```
+POST /api/external/discover/import
+Content-Type: application/json
+```
+
+```json
+{
+  "title": "Ndole",
+  "countryId": "CM001"
+}
+```
+
+---
+
+### Bulk import discovered dishes
+
+```
+POST /api/external/discover/import/bulk
+```
+
+| Query param | Type | Default | Description |
+|-------------|------|---------|-------------|
+| `minConfidence` | integer | `60` | Minimum confidence score (0–100) |
+| `limit` | integer | `50` | Max items to import |
+| `dryRun` | boolean | `false` | Preview without saving |
+
+---
+
+### Enrich one food's nutrition
+
+```
+POST /api/external/enrich/:foodId/nutrition
+```
+
+Fetches and saves nutrition data from USDA / Spoonacular for a single food.
+
+---
+
+### Enrich one food from Wikipedia
+
+```
+POST /api/external/enrich/:foodId/wikipedia
+```
+
+---
+
+### Bulk enrich nutrition
+
+```
+POST /api/external/enrich/bulk/nutrition?dryRun=false
+```
+
+---
+
+### Bulk enrich from Wikipedia
+
+```
+POST /api/external/enrich/bulk/wikipedia?dryRun=false
+```
+
+---
+
+## Data Models
+
+### Food
+
+```json
+{
+  "id": "jollof_rice_NG001",
+  "name": "Jollof Rice",
+  "localName": "Jollof",
+  "aliases": ["Jolof", "Benachin", "Ceebu Jen"],
+  "description": "A classic West African one-pot rice dish cooked in a rich tomato sauce.",
+  "countryId": "NG001",
+  "countryName": "Nigeria",
+  "tribeId": "yoruba_001",
+  "tribeName": "Yoruba",
+  "region": "West Africa",
+  "categories": ["traditional", "lunch", "dinner"],
+  "targetAudience": ["university-students", "young-professionals"],
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/...",
+  "images": [],
+  "tags": ["rice", "tomato", "party food", "one-pot"],
+  "difficulty": "medium",
+  "prepTime": 20,
+  "cookTime": 45,
+  "totalTime": 65,
+  "servings": 4,
+  "estimatedCost": "$5-10",
+  "ingredients": [
+    { "name": "Long grain parboiled rice", "quantity": "2", "unit": "cups", "notes": "washed" },
+    { "name": "Tomatoes", "quantity": "4", "unit": "medium", "notes": "blended with peppers" },
+    { "name": "Tomato paste", "quantity": "2", "unit": "tbsp" },
+    { "name": "Chicken stock", "quantity": "1.5", "unit": "cups" },
+    { "name": "Onion", "quantity": "1", "unit": "large" },
+    { "name": "Vegetable oil", "quantity": "3", "unit": "tbsp" }
+  ],
+  "instructions": [
+    { "step": 1, "description": "Blend tomatoes, scotch bonnet peppers, and half the onion." },
+    { "step": 2, "description": "Fry the tomato blend in oil with tomato paste for 15–20 minutes until the rawness cooks out." },
+    { "step": 3, "description": "Add rice, stock, and seasoning. Cover tightly and cook on low heat for 30 minutes." }
+  ],
+  "nutritionInfo": {
+    "calories": 350,
+    "protein": "8g",
+    "carbs": "65g",
+    "fat": "6g"
+  },
+  "tips": [
+    "Use parboiled rice — it holds up better in the sauce.",
+    "Cook on the lowest heat setting to get the signature smoky bottom."
+  ],
+  "variations": ["Ghanaian Jollof", "Senegalese Thieboudienne", "Party Jollof"],
+  "isFeatured": true,
+  "rating": 4.8,
+  "reviewCount": 142,
+  "viewCount": 9800,
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-06-15T12:00:00.000Z"
+}
+```
+
+**Field reference**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `name` | string | **Required.** Display name |
+| `localName` | string | Name in the local language |
+| `aliases` | string[] | Alternate names across regions |
+| `searchTerms` | string[] | Auto-generated lowercase tokens for fuzzy search |
+| `countryId` | string | **Required.** ID of the country |
+| `tribeId` | string | ID of the ethnic group |
+| `region` | string | e.g. `West Africa` |
+| `categories` | string[] | e.g. `["traditional", "street food", "breakfast"]` |
+| `targetAudience` | string[] | `university-students`, `young-professionals` |
+| `difficulty` | string | `easy`, `medium`, `hard` |
+| `prepTime` | integer | Preparation time in minutes |
+| `cookTime` | integer | Cooking time in minutes |
+| `estimatedCost` | string | e.g. `"budget-friendly"`, `"$5-10"` |
+| `isFeatured` | boolean | Shown in featured feeds |
+
+---
+
+### Country
+
+```json
+{
+  "id": "NG001",
+  "name": "Nigeria",
+  "code": "NG",
+  "region": "West Africa",
+  "capital": "Abuja",
+  "population": 220000000,
+  "languages": ["English", "Hausa", "Yoruba", "Igbo"]
+}
+```
+
+---
+
+### Region
+
+```json
+{
+  "id": "west_africa",
+  "name": "West Africa",
+  "countries": ["NG", "GH", "SN", "CI", "ML", "BJ", "TG", "GN"]
+}
+```
+
+---
+
+### Tribe
+
+```json
+{
+  "id": "yoruba_001",
+  "name": "Yoruba",
+  "countryId": "NG001",
+  "countryName": "Nigeria",
+  "population": 42000000,
+  "region": "Southwest Nigeria"
+}
+```
+
+---
+
+## Error Codes
+
+| HTTP Status | Meaning |
+|-------------|---------|
+| `200` | OK |
+| `400` | Bad request — missing or invalid parameter |
+| `404` | Resource not found |
+| `429` | Rate limit exceeded |
+| `500` | Internal server error |
+
+---
+
+## Running Locally
+
+### Prerequisites
+
+- Node.js 18+
+- A Firebase project with Firestore enabled
+- A Firebase Admin SDK service account key
+
+### Setup
 
 ```bash
-# Install Railway CLI
-npm install -g @railway/cli
+# 1. Clone the repo
+git clone https://github.com/your-org/african-food-database.git
+cd african-food-database
 
-# Login and deploy
-railway login
-railway init
-railway up
+# 2. Install dependencies
+npm install
+
+# 3. Set up environment variables
+#    Copy the example and fill in your Firebase credentials
+cp .env.example .env
 ```
 
-Set environment variables in Railway dashboard.
+**.env reference**
 
-### Option 2: Render (Free Tier)
+```env
+PORT=3000
+NODE_ENV=development
+FIREBASE_SERVICE_ACCOUNT_PATH=./config/serviceAccountKey.json
 
-1. Push to GitHub
-2. Go to [render.com](https://render.com) → New Web Service
-3. Connect your repo
-4. Set build command: `npm install`
-5. Set start command: `npm start`
-6. Add environment variables
+# Optional — only needed for external enrichment endpoints
+USDA_API_KEY=your_usda_api_key
+SPOONACULAR_API_KEY=your_spoonacular_api_key
+```
 
-### Option 3: Google Cloud Run (Free Tier)
+Place your Firebase service account JSON at `config/serviceAccountKey.json`.
+
+### Start the server
 
 ```bash
-# Build and deploy
-gcloud run deploy african-food-api \
-  --source . \
-  --region us-central1 \
-  --allow-unauthenticated
+npm start        # production
+npm run dev      # development (auto-reload)
 ```
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Runtime | Node.js 18+ |
-| Framework | Express 5.2 |
-| Database | Firebase Firestore |
-| Storage | Firebase Cloud Storage |
-| Security | Helmet, CORS, express-rate-limit |
-| External APIs | USDA, OpenFoodFacts, Wikipedia, Spoonacular |
-| Testing | Jest, Supertest |
+The API will be available at `http://localhost:3000`.
 
 ---
 
-## Rate Limits
+## Quick Start Examples
 
-- **100 requests** per 15-minute window per IP
-- Returns `429 Too Many Requests` with retry message
+### JavaScript / fetch
 
----
+```js
+const BASE = 'https://african-food-database-production.up.railway.app/api';
 
-## Contributing
+// Get 5 Nigerian street foods
+const res = await fetch(`${BASE}/foods?countryId=NG001&category=street+food&limit=5`);
+const { data } = await res.json();
+console.log(data.items);
 
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/new-dish`)
-3. Commit changes (`git commit -m 'Add Senegalese dishes'`)
-4. Push to branch (`git push origin feature/new-dish`)
-5. Open a Pull Request
+// Fuzzy search
+const search = await fetch(`${BASE}/search?q=egusi&limit=10`);
+const result = await search.json();
+console.log(result.data.items);
 
----
+// Autocomplete for a search input
+const ac = await fetch(`${BASE}/search/autocomplete?q=jol&limit=8`);
+const { data: suggestions } = await ac.json();
+// ["Jollof Rice", "Jolof", ...]
 
-## License
+// Look up Ghana by ISO code
+const gh = await fetch(`${BASE}/countries/code/GH`);
+const { data: country } = await gh.json();
+```
 
-ISC
+### Python
 
----
+```python
+import requests
 
-## Author
+BASE = "https://african-food-database-production.up.railway.app/api"
 
-**Lydia** — Built with ❤️ for African cuisine
+# Search for dishes by ingredient
+r = requests.get(f"{BASE}/search/ingredient", params={"q": "plantain", "limit": 10})
+foods = r.json()["data"]["items"]
+for food in foods:
+    print(food["name"], "—", food["countryName"])
 
----
+# Get full recipe for a food
+r = requests.get(f"{BASE}/foods/jollof_rice_NG001")
+recipe = r.json()["data"]
+print(recipe["name"], recipe["nutritionInfo"])
+```
 
-> *"Food is our common ground, a universal experience."* — James Beard
+### cURL
+
+```bash
+# List all Ethiopian foods
+curl "https://african-food-database-production.up.railway.app/api/foods?countryId=ET001&limit=20"
+
+# Get the top 5 most-requested missing dishes
+curl "https://african-food-database-production.up.railway.app/api/food-requests/top"
+
+# Search with a fuzzy query
+curl "https://african-food-database-production.up.railway.app/api/search?q=injra"
+```
