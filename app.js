@@ -14,6 +14,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Disable ETags — prevents 304 Not Modified on dynamic API responses
+app.set('etag', false);
+
 if (process.env.NODE_ENV === 'production') {
   app.set('trust proxy', 1);
 }
@@ -21,6 +24,12 @@ if (process.env.NODE_ENV === 'production') {
 // ─── Security & parsing middleware ─────────────────────────────
 app.use(helmet());
 app.use(cors());
+
+// Force fresh responses for all /api routes — no client-side caching
+app.use('/api', (req, res, next) => {
+  res.set('Cache-Control', 'no-store');
+  next();
+});
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
