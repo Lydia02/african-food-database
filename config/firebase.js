@@ -7,6 +7,19 @@ dotenv.config();
 let db;
 let bucket;
 
+const readEnv = (key) => {
+  const value = process.env[key];
+  if (typeof value !== 'string') return value;
+  const trimmed = value.trim();
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"'))
+    || (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1);
+  }
+  return trimmed;
+};
+
 const initializeFirebase = () => {
   if (admin.apps.length > 0) {
     db = admin.firestore();
@@ -14,21 +27,21 @@ const initializeFirebase = () => {
     return { db, bucket };
   }
 
-  const serviceAccountPath = process.env.FIREBASE_SERVICE_ACCOUNT_PATH;
-  const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
+  const serviceAccountPath = readEnv('FIREBASE_SERVICE_ACCOUNT_PATH');
+  const serviceAccountJson = readEnv('FIREBASE_SERVICE_ACCOUNT_JSON');
 
   const plainServiceAccount = {
-    type: process.env.type,
-    project_id: process.env.project_id,
-    private_key_id: process.env.private_key_id,
-    private_key: process.env.private_key,
-    client_email: process.env.client_email,
-    client_id: process.env.client_id,
-    auth_uri: process.env.auth_uri,
-    token_uri: process.env.token_uri,
-    auth_provider_x509_cert_url: process.env.auth_provider_x509_cert_url,
-    client_x509_cert_url: process.env.client_x509_cert_url,
-    universe_domain: process.env.universe_domain,
+    type: readEnv('type'),
+    project_id: readEnv('project_id') || readEnv('FIREBASE_PROJECT_ID'),
+    private_key_id: readEnv('private_key_id'),
+    private_key: readEnv('private_key'),
+    client_email: readEnv('client_email'),
+    client_id: readEnv('client_id'),
+    auth_uri: readEnv('auth_uri'),
+    token_uri: readEnv('token_uri'),
+    auth_provider_x509_cert_url: readEnv('auth_provider_x509_cert_url'),
+    client_x509_cert_url: readEnv('client_x509_cert_url'),
+    universe_domain: readEnv('universe_domain'),
   };
 
   try {
@@ -37,7 +50,7 @@ const initializeFirebase = () => {
         const serviceAccount = JSON.parse(serviceAccountJson);
         admin.initializeApp({
           credential: admin.credential.cert(serviceAccount),
-          storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${serviceAccount.project_id}.appspot.com`,
+          storageBucket: readEnv('FIREBASE_STORAGE_BUCKET') || `${serviceAccount.project_id}.appspot.com`,
         });
         console.log('✅ Firebase initialized with service account JSON env var');
       } catch (jsonErr) {
@@ -49,23 +62,23 @@ const initializeFirebase = () => {
       const serviceAccount = JSON.parse(readFileSync(serviceAccountPath, 'utf8'));
       admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${process.env.FIREBASE_PROJECT_ID}.appspot.com`,
+        storageBucket: readEnv('FIREBASE_STORAGE_BUCKET') || `${readEnv('FIREBASE_PROJECT_ID')}.appspot.com`,
       });
       console.log('✅ Firebase initialized with service account file');
     }
 
     if (
       admin.apps.length === 0
-      && process.env.FIREBASE_CLIENT_EMAIL
-      && process.env.FIREBASE_PRIVATE_KEY
+      && readEnv('FIREBASE_CLIENT_EMAIL')
+      && readEnv('FIREBASE_PRIVATE_KEY')
     ) {
       admin.initializeApp({
         credential: admin.credential.cert({
-          projectId: process.env.FIREBASE_PROJECT_ID,
-          clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-          privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+          projectId: readEnv('FIREBASE_PROJECT_ID'),
+          clientEmail: readEnv('FIREBASE_CLIENT_EMAIL'),
+          privateKey: readEnv('FIREBASE_PRIVATE_KEY').replace(/\\n/g, '\n'),
         }),
-        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${process.env.FIREBASE_PROJECT_ID}.appspot.com`,
+        storageBucket: readEnv('FIREBASE_STORAGE_BUCKET') || `${readEnv('FIREBASE_PROJECT_ID')}.appspot.com`,
       });
       console.log('✅ Firebase initialized with environment variables');
     }
@@ -80,7 +93,7 @@ const initializeFirebase = () => {
           ...plainServiceAccount,
           private_key: plainServiceAccount.private_key.replace(/\\n/g, '\n'),
         }),
-        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${plainServiceAccount.project_id}.appspot.com`,
+        storageBucket: readEnv('FIREBASE_STORAGE_BUCKET') || `${plainServiceAccount.project_id}.appspot.com`,
       });
       console.log('✅ Firebase initialized with plain service-account environment variables');
     }
@@ -89,7 +102,7 @@ const initializeFirebase = () => {
       // For development/testing — initialize with project ID only (uses ADC)
       admin.initializeApp({
         projectId: process.env.FIREBASE_PROJECT_ID || 'african-food-database',
-        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'african-food-database.appspot.com',
+        storageBucket: readEnv('FIREBASE_STORAGE_BUCKET') || 'african-food-database.appspot.com',
       });
       console.log('⚠️  Firebase initialized with default credentials (limited access)');
     }
