@@ -4,9 +4,9 @@ A comprehensive REST API featuring **358+ traditional African dishes** from all 
 
 ## Live Demo
 
-> **Base URL**: `https://your-deployment-url.com`
+> **Base URL**: `https://african-food-database-production.up.railway.app`
 >
-> Try it: `GET /api/foods?limit=5`
+> Try it: `GET https://african-food-database-production.up.railway.app/api/foods?limit=5`
 
 ---
 
