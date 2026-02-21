@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 
 import { countryRoutes, foodRoutes, regionRoutes, tribeRoutes, uploadRoutes, externalRoutes, searchRoutes, foodRequestRoutes } from './routes/index.js';
 import errorHandler from './middleware/errorHandler.js';
+import * as foodCache from './services/foodCacheService.js';
 
 dotenv.config();
 
@@ -29,14 +30,28 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 // ─── Rate limiting ─────────────────────────────────────────────
-const limiter = rateLimit({
+// General read limiter — generous for search-heavy clients
+const readLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100,
+  max: 500,
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => req.method !== 'GET',
   message: { success: false, error: 'Too many requests, please try again later.' },
 });
-app.use('/api', limiter);
+
+// Strict write limiter — POST / PATCH / PUT / DELETE
+const writeLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 50,
+  standardHeaders: true,
+  legacyHeaders: false,
+  skip: (req) => req.method === 'GET',
+  message: { success: false, error: 'Too many requests, please try again later.' },
+});
+
+app.use('/api', readLimiter);
+app.use('/api', writeLimiter);
 
 // ─── Health check ──────────────────────────────────────────────
 app.get('/', (req, res) => {
@@ -58,7 +73,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/health', (req, res) => {
-  res.json({ success: true, status: 'healthy', timestamp: new Date().toISOString() });
+  res.json({
+    success: true,
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    cache: foodCache.stats(),
+  });
 });
 
 // ─── API routes ────────────────────────────────────────────────
@@ -84,6 +104,10 @@ if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
     console.log(`\n🚀 African Food Database API running on http://localhost:${PORT}`);
     console.log(`📖 Environment: ${process.env.NODE_ENV || 'development'}\n`);
+    // Warm up the in-memory food cache eagerly so the first request is fast
+    foodCache.warmUp().catch((err) => {
+      console.error('⚠️  Initial cache warm-up failed (will retry on first request):', err.message);
+    });
   });
 }
 
