@@ -1,11 +1,19 @@
 import { db } from '../config/firebase.js';
 import { COLLECTIONS } from '../config/constants.js';
 import { formatFood, validateFood } from '../models/Food.js';
+import * as cache from './foodCacheService.js';
 
 const collection = db.collection(COLLECTIONS.FOODS);
 
+// ─── Read helpers (all served from in-memory cache) ───────────────────────────
+
+const paginate = (arr, page, limit) => {
+  const start = (page - 1) * limit;
+  return arr.slice(start, start + limit);
+};
+
 /**
- * Get all foods with filters
+ * Get all foods with filters — served from cache, zero Firestore reads.
  */
 export const getAllFoods = async ({
   page = 1,
@@ -17,142 +25,93 @@ export const getAllFoods = async ({
   difficulty = '',
   search = '',
 } = {}) => {
-  let query = collection.orderBy('name');
+  let foods = await cache.getAll();
 
-  if (countryId) {
-    query = collection.where('countryId', '==', countryId).orderBy('name');
-  } else if (tribeId) {
-    query = collection.where('tribeId', '==', tribeId).orderBy('name');
-  } else if (category) {
-    query = collection.where('categories', 'array-contains', category).orderBy('name');
-  } else if (targetAudience) {
-    query = collection.where('targetAudience', 'array-contains', targetAudience).orderBy('name');
-  } else if (difficulty) {
-    query = collection.where('difficulty', '==', difficulty).orderBy('name');
-  } else if (search) {
-    const end = search.slice(0, -1) + String.fromCharCode(search.charCodeAt(search.length - 1) + 1);
-    query = collection
-      .where('name', '>=', search)
-      .where('name', '<', end)
-      .orderBy('name');
+  if (countryId)      foods = foods.filter((f) => f.countryId === countryId);
+  if (tribeId)        foods = foods.filter((f) => f.tribeId === tribeId);
+  if (category)       foods = foods.filter((f) => (f.categories || []).includes(category));
+  if (targetAudience) foods = foods.filter((f) => (f.targetAudience || []).includes(targetAudience));
+  if (difficulty)     foods = foods.filter((f) => f.difficulty === difficulty);
+  if (search) {
+    const q = search.toLowerCase();
+    foods = foods.filter((f) => (f.name || '').toLowerCase().includes(q));
   }
 
-  const snapshot = await query.limit(limit).offset((page - 1) * limit).get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-
-  return { foods, pagination: { page, limit } };
+  const total = foods.length;
+  return {
+    foods: paginate(foods, page, limit),
+    pagination: { page, limit, total },
+  };
 };
 
 /**
- * Get foods by country
+ * Get foods by country — served from cache.
  */
 export const getFoodsByCountry = async (countryId, { page = 1, limit = 20 } = {}) => {
-  const snapshot = await collection
-    .where('countryId', '==', countryId)
-    .orderBy('name')
-    .limit(limit)
-    .offset((page - 1) * limit)
-    .get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-  return foods;
+  const all = await cache.getAll();
+  const filtered = all.filter((f) => f.countryId === countryId);
+  return paginate(filtered, page, limit);
 };
 
 /**
- * Get foods by tribe
+ * Get foods by tribe — served from cache.
  */
 export const getFoodsByTribe = async (tribeId, { page = 1, limit = 20 } = {}) => {
-  const snapshot = await collection
-    .where('tribeId', '==', tribeId)
-    .orderBy('name')
-    .limit(limit)
-    .offset((page - 1) * limit)
-    .get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-  return foods;
+  const all = await cache.getAll();
+  const filtered = all.filter((f) => f.tribeId === tribeId);
+  return paginate(filtered, page, limit);
 };
 
 /**
- * Get foods for university students (quick, budget-friendly)
+ * Get foods for university students — served from cache.
  */
 export const getFoodsForStudents = async ({ page = 1, limit = 20 } = {}) => {
-  const snapshot = await collection
-    .where('targetAudience', 'array-contains', 'university-students')
-    .orderBy('name')
-    .limit(limit)
-    .offset((page - 1) * limit)
-    .get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-  return foods;
+  const all = await cache.getAll();
+  const filtered = all.filter((f) => (f.targetAudience || []).includes('university-students'));
+  return paginate(filtered, page, limit);
 };
 
 /**
- * Get foods for young professionals
+ * Get foods for young professionals — served from cache.
  */
 export const getFoodsForProfessionals = async ({ page = 1, limit = 20 } = {}) => {
-  const snapshot = await collection
-    .where('targetAudience', 'array-contains', 'young-professionals')
-    .orderBy('name')
-    .limit(limit)
-    .offset((page - 1) * limit)
-    .get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-  return foods;
+  const all = await cache.getAll();
+  const filtered = all.filter((f) => (f.targetAudience || []).includes('young-professionals'));
+  return paginate(filtered, page, limit);
 };
 
 /**
- * Get featured foods
+ * Get featured foods — served from cache.
  */
 export const getFeaturedFoods = async (limit = 10) => {
-  const snapshot = await collection
-    .where('isFeatured', '==', true)
-    .orderBy('rating', 'desc')
-    .limit(limit)
-    .get();
-
-  const foods = [];
-  snapshot.forEach((doc) => {
-    foods.push({ id: doc.id, ...doc.data() });
-  });
-  return foods;
+  const all = await cache.getAll();
+  return all
+    .filter((f) => f.isFeatured === true)
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, limit);
 };
 
 /**
- * Get a single food by ID
+ * Get a single food by ID — served from cache.
+ * View count increment is fire-and-forget (non-blocking, doesn't burn quota).
  */
 export const getFoodById = async (id) => {
-  const doc = await collection.doc(id).get();
-  if (!doc.exists) return null;
+  const food = await cache.getById(id);
+  if (!food) return null;
 
-  // Increment view count
-  await collection.doc(id).update({
-    viewCount: (doc.data().viewCount || 0) + 1,
-  });
+  // Increment view count in the background — don't await it
+  const newCount = (food.viewCount || 0) + 1;
+  collection.doc(id).update({ viewCount: newCount }).catch(() => {});
+  // Update cache immediately so the returned doc reflects the new count
+  cache.upsert(id, { ...food, viewCount: newCount });
 
-  return { id: doc.id, ...doc.data() };
+  return { ...food, viewCount: newCount };
 };
 
+// ─── Write operations (Firestore + cache update) ──────────────────────────────
+
 /**
- * Create a food
+ * Create a food — writes to Firestore and inserts into cache.
  */
 export const createFood = async (data) => {
   const validation = validateFood(data);
@@ -162,53 +121,56 @@ export const createFood = async (data) => {
 
   const formatted = formatFood(data);
   const docRef = await collection.add(formatted);
+  const newFood = { id: docRef.id, ...formatted };
 
-  // Update country food count
+  // Update cache immediately
+  cache.upsert(docRef.id, formatted);
+
+  // Update country food count (fire-and-forget)
   if (formatted.countryId) {
     const countryRef = db.collection(COLLECTIONS.COUNTRIES).doc(formatted.countryId);
-    const countryDoc = await countryRef.get();
-    if (countryDoc.exists) {
-      await countryRef.update({
-        foodCount: (countryDoc.data().foodCount || 0) + 1,
-      });
-    }
+    countryRef.get().then((countryDoc) => {
+      if (countryDoc.exists) {
+        countryRef.update({ foodCount: (countryDoc.data().foodCount || 0) + 1 }).catch(() => {});
+      }
+    }).catch(() => {});
   }
 
-  return { id: docRef.id, ...formatted };
+  return newFood;
 };
 
 /**
- * Update a food
+ * Update a food — writes to Firestore and updates cache.
  */
 export const updateFood = async (id, data) => {
-  const existing = await getFoodById(id);
+  const existing = await cache.getById(id);
   if (!existing) throw new Error('Food not found');
 
   const formatted = formatFood({ ...existing, ...data });
   await collection.doc(id).update(formatted);
+  cache.upsert(id, formatted);
   return { id, ...formatted };
 };
 
 /**
- * Delete a food
+ * Delete a food — deletes from Firestore and removes from cache.
  */
 export const deleteFood = async (id) => {
-  const existing = await collection.doc(id).get();
-  if (!existing.exists) throw new Error('Food not found');
+  const existing = await cache.getById(id);
+  if (!existing) throw new Error('Food not found');
 
-  const foodData = existing.data();
   await collection.doc(id).delete();
+  cache.remove(id);
 
-  // Decrement country food count
-  if (foodData.countryId) {
-    const countryRef = db.collection(COLLECTIONS.COUNTRIES).doc(foodData.countryId);
-    const countryDoc = await countryRef.get();
-    if (countryDoc.exists) {
-      const currentCount = countryDoc.data().foodCount || 0;
-      await countryRef.update({
-        foodCount: Math.max(0, currentCount - 1),
-      });
-    }
+  // Decrement country food count (fire-and-forget)
+  if (existing.countryId) {
+    const countryRef = db.collection(COLLECTIONS.COUNTRIES).doc(existing.countryId);
+    countryRef.get().then((countryDoc) => {
+      if (countryDoc.exists) {
+        const current = countryDoc.data().foodCount || 0;
+        countryRef.update({ foodCount: Math.max(0, current - 1) }).catch(() => {});
+      }
+    }).catch(() => {});
   }
 
   return { id, deleted: true };

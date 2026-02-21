@@ -8,3 +8,4 @@ export { default as enrichmentService } from './enrichmentService.js';
 export { default as discoveryService } from './discoveryService.js';
 export { default as searchService } from './searchService.js';
 export { default as foodRequestService } from './foodRequestService.js';
+export { default as foodCacheService } from './foodCacheService.js';

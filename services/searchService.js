@@ -1,7 +1,5 @@
-import { db } from '../config/firebase.js';
-import { COLLECTIONS } from '../config/constants.js';
+import * as cache from './foodCacheService.js';
 
-const foodsCol = db.collection(COLLECTIONS.FOODS);
 
 /**
  * Levenshtein distance between two strings (edit distance)
@@ -149,44 +147,13 @@ export const smartSearch = async (query, {
 
   const q = query.trim().toLowerCase();
 
-  // Step 1: Fetch candidates from Firestore
-  // Use array-contains-any on searchTerms if we can extract tokens,
-  // otherwise fall back to fetching all foods (for smaller collections)
-  let candidates = [];
+  // Step 1: Load all candidates from in-memory cache (zero Firestore reads)
+  let candidates = await cache.getAll();
 
-  // Try prefix-based fetch first for the main query word
-  const tokens = q.split(/[\s\-&,]+/).filter((t) => t.length > 1);
-
-  // Attempt searchTerms array-contains for each token
-  // Firestore only allows one array-contains per query, so we use the longest token
-  const primaryToken = tokens.sort((a, b) => b.length - a.length)[0] || q;
-
-  // Firestore composite filter: searchTerms array-contains primaryToken
-  let firestoreQuery = foodsCol;
-
-  // Apply optional filters
-  if (countryId) {
-    firestoreQuery = firestoreQuery.where('countryId', '==', countryId);
-  } else if (region) {
-    firestoreQuery = firestoreQuery.where('region', '==', region);
-  } else if (category) {
-    firestoreQuery = firestoreQuery.where('categories', 'array-contains', category);
-  }
-
-  // Fetch a generous set of candidates (up to 500)
-  const snapshot = await firestoreQuery.limit(500).get();
-
-  snapshot.forEach((doc) => {
-    candidates.push({ id: doc.id, ...doc.data() });
-  });
-
-  // If we got 0 results with filters, try without filters
-  if (candidates.length === 0 && (countryId || region || category)) {
-    const fallback = await foodsCol.limit(500).get();
-    fallback.forEach((doc) => {
-      candidates.push({ id: doc.id, ...doc.data() });
-    });
-  }
+  // Apply optional filters in memory
+  if (countryId)  candidates = candidates.filter((f) => f.countryId === countryId);
+  else if (region) candidates = candidates.filter((f) => f.region === region);
+  else if (category) candidates = candidates.filter((f) => (f.categories || []).includes(category));
 
   // Step 2: Score every candidate
   const scored = candidates
@@ -216,53 +183,36 @@ export const autocomplete = async (query, { limit = 10 } = {}) => {
   if (!query || query.trim().length < 2) return [];
 
   const q = query.trim().toLowerCase();
-  const end = q.slice(0, -1) + String.fromCharCode(q.charCodeAt(q.length - 1) + 1);
-
-  // Firestore prefix query on name
-  const snapshot = await foodsCol
-    .where('name', '>=', q.charAt(0).toUpperCase() + q.slice(1))
-    .where('name', '<', end.charAt(0).toUpperCase() + end.slice(1))
-    .limit(limit)
-    .get();
+  const all = await cache.getAll();
 
   const suggestions = [];
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    suggestions.push({
-      id: doc.id,
-      name: data.name,
-      localName: data.localName || '',
-      countryName: data.countryName || '',
-      imageUrl: data.imageUrl || '',
-    });
-  });
+  const seen = new Set();
 
-  // If Firestore prefix didn't yield much, do in-memory scan on aliases
-  if (suggestions.length < limit) {
-    const allSnap = await foodsCol.limit(300).get();
-    const seen = new Set(suggestions.map((s) => s.id));
+  for (const food of all) {
+    if (suggestions.length >= limit) break;
 
-    allSnap.forEach((doc) => {
-      if (suggestions.length >= limit) return;
-      if (seen.has(doc.id)) return;
+    const name    = (food.name || '').toLowerCase();
+    const local   = (food.localName || '').toLowerCase();
+    const aliases = (food.aliases || []).map((a) => a.toLowerCase());
+    const terms   = food.searchTerms || [];
 
-      const data = doc.data();
-      const matches =
-        (data.localName || '').toLowerCase().startsWith(q) ||
-        (data.aliases || []).some((a) => a.toLowerCase().startsWith(q)) ||
-        (data.searchTerms || []).some((t) => t.startsWith(q));
+    const matches =
+      name.startsWith(q) ||
+      name.includes(q) ||
+      local.startsWith(q) ||
+      aliases.some((a) => a.startsWith(q) || a.includes(q)) ||
+      terms.some((t) => t.startsWith(q));
 
-      if (matches) {
-        suggestions.push({
-          id: doc.id,
-          name: data.name,
-          localName: data.localName || '',
-          countryName: data.countryName || '',
-          imageUrl: data.imageUrl || '',
-        });
-        seen.add(doc.id);
-      }
-    });
+    if (matches && !seen.has(food.id)) {
+      seen.add(food.id);
+      suggestions.push({
+        id: food.id,
+        name: food.name,
+        localName: food.localName || '',
+        countryName: food.countryName || '',
+        imageUrl: food.imageUrl || '',
+      });
+    }
   }
 
   return suggestions;
@@ -275,19 +225,13 @@ export const searchByIngredient = async (ingredient, { page = 1, limit = 20 } = 
   if (!ingredient) return { results: [], totalMatches: 0 };
 
   const q = ingredient.trim().toLowerCase();
+  const all = await cache.getAll();
 
-  // Firestore doesn't support searching inside array-of-objects,
-  // so we fetch and filter in-memory
-  const snapshot = await foodsCol.limit(500).get();
-  const matches = [];
-
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    const found = (data.ingredients || []).some((ing) =>
+  const matches = all.filter((food) =>
+    (food.ingredients || []).some((ing) =>
       (ing.name || '').toLowerCase().includes(q)
-    );
-    if (found) matches.push({ id: doc.id, ...data });
-  });
+    )
+  );
 
   const totalMatches = matches.length;
   const start = (page - 1) * limit;
