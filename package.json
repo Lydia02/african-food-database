@@ -40,7 +40,10 @@
     "images:download": "python migrations/download_food_images.py migrations/foods.csv",
     "images:upload": "node migrations/uploadAndUpdateImages.js",
     "images:upload:dry": "node migrations/uploadAndUpdateImages.js --dry-run",
-    "images:pipeline": "npm run images:export-csv && npm run images:download && npm run images:upload"
+    "images:pipeline": "npm run images:export-csv && npm run images:download && npm run images:upload",
+    "images:download:ddg": "python migrations/download_missing_images_ddg.py",
+    "images:upload:ddg": "node migrations/uploadAndUpdateImages.js --csv=migrations/downloads_ddg.csv",
+    "images:upload:ddg:dry": "node migrations/uploadAndUpdateImages.js --csv=migrations/downloads_ddg.csv --dry-run"
   },
   "keywords": ["african-food", "recipes", "pantrypal", "firebase"],
   "author": "Lydia",

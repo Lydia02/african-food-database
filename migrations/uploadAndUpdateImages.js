@@ -1,16 +1,18 @@
 /**
  * uploadAndUpdateImages.js
  *
- * Reads migrations/downloads.csv (produced by download_food_images.py),
+ * Reads a downloads CSV (produced by download_food_images.py or download_missing_images_ddg.py),
  * uploads each downloaded image file to Firebase Storage under foods/images/,
  * then updates the matching Firestore food document with the new public URL.
  *
  * Usage:
- *   node migrations/uploadAndUpdateImages.js             # live run
- *   node migrations/uploadAndUpdateImages.js --dry-run   # preview only, no writes
+ *   node migrations/uploadAndUpdateImages.js                                      # default CSV
+ *   node migrations/uploadAndUpdateImages.js --dry-run                            # preview only
+ *   node migrations/uploadAndUpdateImages.js --csv migrations/downloads_ddg.csv   # custom CSV
  *
- * npm script:
+ * npm scripts:
  *   npm run images:upload
+ *   npm run images:upload:ddg
  */
 
 import fs from 'fs';
@@ -20,7 +22,8 @@ import { db, bucket } from '../config/firebase.js';
 import { COLLECTIONS } from '../config/constants.js';
 
 const DRY_RUN   = process.argv.includes('--dry-run');
-const CSV_PATH  = 'migrations/downloads.csv';
+const csvArg    = process.argv.find(a => a.startsWith('--csv='));
+const CSV_PATH  = csvArg ? csvArg.split('=')[1] : 'migrations/downloads.csv';
 const STORAGE_FOLDER = 'foods/images';
 
 // ---------------------------------------------------------------------------
