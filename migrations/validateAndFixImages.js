@@ -98,25 +98,49 @@ const MANUAL_IMAGE_OVERRIDES = {
   'kelewele':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Kelewele_Seller_in_Takoradi.jpg/960px-Kelewele_Seller_in_Takoradi.jpg',
   'dodo':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'dodo fried plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   'alloco':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'alloco fried plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   'makemba':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'makemba fried plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   'bole':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'bole roasted plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   'boli':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'boli roasted plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   'beans and plantain':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
   'beans plantain':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'beans plantain ewa dodo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'beans plantain burundi style':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Beans_plantain.jpg/800px-Beans_plantain.jpg',
+  'plantain porridge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
   // ── Ugandan ───────────────────────────────────────────────────────────────
   'rolex':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rolex_wrap.jpg/960px-Rolex_wrap.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rolex_Uganda.jpg/800px-Rolex_Uganda.jpg',
+  'rolex rolled eggs':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rolex_Uganda.jpg/800px-Rolex_Uganda.jpg',
+  'rolex chapati egg roll':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rolex_Uganda.jpg/800px-Rolex_Uganda.jpg',
   // ── Nigerian / West African ───────────────────────────────────────────────
   'moi moi':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/960px-Moin_Moin.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/800px-Moin_Moin.jpg',
+  'moi moi bean pudding':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/800px-Moin_Moin.jpg',
+  'moi moi and custard pap':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/800px-Moin_Moin.jpg',
   'efo riro':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg/960px-Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg',
   'pounded yam':
@@ -146,54 +170,540 @@ const MANUAL_IMAGE_OVERRIDES = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kenkey_and_ground_pepper_with_sardine.jpg/960px-Kenkey_and_ground_pepper_with_sardine.jpg',
   // ── East African ──────────────────────────────────────────────────────────
   'nyama choma':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/960px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/800px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
   'ugali na nyama':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
   'ugali sukuma wiki':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
   'ugali and sukuma wiki':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'ugali sukuma wiki':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
   'chapati and beans':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/960px-2_Chapati_warm_and_ready_to_be_eaten.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Chapati_beans.jpg/800px-Chapati_beans.jpg',
   'chipsi mayai':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zee%29.jpg/960px-Chipsi_mayai_%28zee%29.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zee%29.jpg/800px-Chipsi_mayai_%28zee%29.jpg',
+  'chipsi mayai chips omelette':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zee%29.jpg/800px-Chipsi_mayai_%28zee%29.jpg',
+  'pilau':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pilau_kenya.jpg/800px-Pilau_kenya.jpg',
+  'pilau kenyan spiced rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pilau_kenya.jpg/800px-Pilau_kenya.jpg',
+  'ndizi nyama':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'ndizi nyama plantain meat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'wali na maharage':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'zanzibar pilau':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pilau_kenya.jpg/800px-Pilau_kenya.jpg',
+  'zanzibar pizza':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/ZanzibarPizza.jpg/800px-ZanzibarPizza.jpg',
+  'mahindi choma':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Roasted_corn_Kenya.jpg/800px-Roasted_corn_Kenya.jpg',
+  'mahindi choma roasted corn':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Roasted_corn_Kenya.jpg/800px-Roasted_corn_Kenya.jpg',
   // ── West African (Senegal / Gambia / Mali) ────────────────────────────────
   'thieboudienne':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Thieboudienne.JPG/960px-Thieboudienne.JPG',
   'yassa chicken':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Poulet_Yassa_Chicken_rice_with_onion_sauce.jpg/960px-Poulet_Yassa_Chicken_rice_with_onion_sauce.jpg',
   'fura da nono':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fura_da_nono.jpg/960px-Fura_da_nono.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fura_da_nono.jpg/800px-Fura_da_nono.jpg',
   // ── North African ─────────────────────────────────────────────────────────
   'ful medames':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/960px-Ful_medames_%28arabic_meal%29.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/800px-Ful_medames_%28arabic_meal%29.jpg',
+  'ful medames and bread':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/800px-Ful_medames_%28arabic_meal%29.jpg',
+  'ful medames sudan':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/800px-Ful_medames_%28arabic_meal%29.jpg',
+  'ful eritrean fava beans':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/800px-Ful_medames_%28arabic_meal%29.jpg',
   'brik a l oeuf':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Brikdish.jpg/960px-Brikdish.jpg',
   'chorba frik':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chorba_frik_algerienne.jpg/960px-Chorba_frik_algerienne.jpg',
   // ── Southern African ──────────────────────────────────────────────────────
   'bunny chow':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Quarter_Mutton_Bunny_Chow.jpg/960px-Quarter_Mutton_Bunny_Chow.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Quarter_Mutton_Bunny_Chow.jpg/800px-Quarter_Mutton_Bunny_Chow.jpg',
   'malva pudding':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Malva_Pudding.jpg/960px-Malva_Pudding.jpg',
   'vetkoek and mince':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vetkoek_with_mince-001.jpg/960px-Vetkoek_with_mince-001.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vetkoek_mince.jpg/800px-Vetkoek_mince.jpg',
   // ── Ethiopian / Eritrean ──────────────────────────────────────────────────
   'shiro wot':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Taita_and_shiro.jpg/960px-Taita_and_shiro.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Taita_and_shiro.jpg/800px-Taita_and_shiro.jpg',
+  'shiro wat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Taita_and_shiro.jpg/800px-Taita_and_shiro.jpg',
+  'misir wot':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Misir_wot.jpg/800px-Misir_wot.jpg',
+  'misir wot red lentil stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Misir_wot.jpg/800px-Misir_wot.jpg',
+  'tibs':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
+  'tibs sauteed meat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
+  'injera with doro wat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Injera_sitting.jpg/800px-Injera_sitting.jpg',
+  'injera and firfir':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Firfir_ethiopian.jpg/800px-Firfir_ethiopian.jpg',
+  'ethiopian coffee ceremony':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ethiopian_coffee_ceremony.jpg/800px-Ethiopian_coffee_ceremony.jpg',
+  'kitfo ethiopian steak tartare':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Kitfo.jpg/800px-Kitfo.jpg',
+  'kitfo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Kitfo.jpg/800px-Kitfo.jpg',
   // ── Somali / Djiboutian ───────────────────────────────────────────────────
   'bariis iskukaris':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/960px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'bariis iskukaris somali spiced rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'canjeero':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Canjeero_Somali.jpg/800px-Canjeero_Somali.jpg',
+  'canjeero somali pancake':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Canjeero_Somali.jpg/800px-Canjeero_Somali.jpg',
+  'skoudehkaris':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'skoudehkaris djibouti spiced rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'suqaar':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
+  'suqaar somali sauteed meat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
+  'cambuulo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'cambuulo adzuki bean dessert':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/800px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg',
+  'walwal':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
+  'walwal south sudan stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tibs_ethiopian.jpg/800px-Tibs_ethiopian.jpg',
   // ── Central / Equatorial African ─────────────────────────────────────────
   'kedjenou chicken':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Kedjenou_-_01.jpg/960px-Kedjenou_-_01.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Kedjenou_-_01.jpg/800px-Kedjenou_-_01.jpg',
+  'pondu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'pondu saka saka':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'muamba de galinha':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'moambe chicken':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'moambe chicken poulet moambe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'poulet moambe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'ndole and plantain':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Ndole_plantain.jpg/800px-Ndole_plantain.jpg',
+  'poulet dg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Poulet_DG.jpg/800px-Poulet_DG.jpg',
+  'poulet dg director general chicken':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Poulet_DG.jpg/800px-Poulet_DG.jpg',
+  'eru soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Eru_soup.jpg/800px-Eru_soup.jpg',
+  'koki beans':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Eru_soup.jpg/800px-Eru_soup.jpg',
+  'liboke ya mbisi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'calulu de peixe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'calulu sao-tomense':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'mwambe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'mwambe palm butter sauce':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  'fufu and pondu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'fufu pondu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'fufu light soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'fufu and light soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'fufu peanut soup togo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'mikate':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'mikate congolese doughnuts':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'makala':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'makala congolese doughnut':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'kanda':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'kanda meatballs in sauce':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'baton de manioc':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Baton_de_manioc.jpg/800px-Baton_de_manioc.jpg',
+  'pate noire sauce gombo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'pepesoup equatoguinean':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pepper_soup.jpg/800px-Pepper_soup.jpg',
+  'babenda':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  // ── Ghanaian ──────────────────────────────────────────────────────────────
+  'ghanaian fried rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nigerian_fried_rice.jpg/800px-Nigerian_fried_rice.jpg',
+  'fried rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nigerian_fried_rice.jpg/800px-Nigerian_fried_rice.jpg',
+  'attieke':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Attieke_fish.jpg/800px-Attieke_fish.jpg',
+  'attieke cassava couscous':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Attieke_fish.jpg/800px-Attieke_fish.jpg',
+  'attieke and fried fish':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Attieke_fish.jpg/800px-Attieke_fish.jpg',
+  'garba':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Attieke_fish.jpg/800px-Attieke_fish.jpg',
+  'garba attieke with tuna':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Attieke_fish.jpg/800px-Attieke_fish.jpg',
+  'ampesi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'ampesi boiled yam plantain with kontomire':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'bofrot':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'bofrot ghanaian doughnut':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'klui-klui':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Koose_1.png/800px-Koose_1.png',
+  'klui klui peanut sticks':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Koose_1.png/800px-Koose_1.png',
+  'koose bean cake and koko':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Koose_1.png/800px-Koose_1.png',
+  'roasted corn':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Roasted_corn_Kenya.jpg/800px-Roasted_corn_Kenya.jpg',
+  // ── Nigerian ──────────────────────────────────────────────────────────────
+  'eba':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eba_and_soup.jpg/800px-Eba_and_soup.jpg',
+  'eba garri':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eba_and_soup.jpg/800px-Eba_and_soup.jpg',
+  'eba and egusi soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eba_and_soup.jpg/800px-Eba_and_soup.jpg',
+  'garri and groundnut':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Garri_groundnut.jpg/800px-Garri_groundnut.jpg',
+  'ofe nsala':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Igbo_cuisine%2C_ofe_nsala.jpg/800px-Igbo_cuisine%2C_ofe_nsala.jpg',
+  'ofe nsala white soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Igbo_cuisine%2C_ofe_nsala.jpg/800px-Igbo_cuisine%2C_ofe_nsala.jpg',
+  'ofe onugbu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Igbo_cuisine%2C_ofe_nsala.jpg/800px-Igbo_cuisine%2C_ofe_nsala.jpg',
+  'ofe onugbu bitter leaf soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Igbo_cuisine%2C_ofe_nsala.jpg/800px-Igbo_cuisine%2C_ofe_nsala.jpg',
+  'ofe oha':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Igbo_cuisine%2C_ofe_nsala.jpg/800px-Igbo_cuisine%2C_ofe_nsala.jpg',
+  'ofe akwu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  'ofe akwu banga soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  'ogbono soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ogbono_soup.jpg/800px-Ogbono_soup.jpg',
+  'ewedu soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ewedu_soup.jpg/800px-Ewedu_soup.jpg',
+  'gbegiri soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'tuwo shinkafa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Iyan_%26_Efo-Riro_%28737053836%29.jpg/800px-Iyan_%26_Efo-Riro_%28737053836%29.jpg',
+  'tuwo shinkafa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Iyan_%26_Efo-Riro_%28737053836%29.jpg/800px-Iyan_%26_Efo-Riro_%28737053836%29.jpg',
+  'miyan kuka':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'miyan kuka baobab soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'miyan taushe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Miyan_taushe.jpg/800px-Miyan_taushe.jpg',
+  'miyan taushe pumpkin soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Miyan_taushe.jpg/800px-Miyan_taushe.jpg',
+  'nigerian chicken stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg/800px-Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg',
+  'pepper soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pepper_soup.jpg/800px-Pepper_soup.jpg',
+  'edikang ikong':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Edikang_ikong.jpg/800px-Edikang_ikong.jpg',
+  'ekpang nkukwo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Edikang_ikong.jpg/800px-Edikang_ikong.jpg',
+  'afang soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Afang_Soup.jpg/800px-Afang_Soup.jpg',
+  'ogi pap and akara':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Akara_and_pap.jpg/800px-Akara_and_pap.jpg',
+  'ogi and akara':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Akara_and_pap.jpg/800px-Akara_and_pap.jpg',
+  'pap':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Akara_and_pap.jpg/800px-Akara_and_pap.jpg',
+  'pap ogi akamu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Akara_and_pap.jpg/800px-Akara_and_pap.jpg',
+  'pap en vleis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Akara_and_pap.jpg/800px-Akara_and_pap.jpg',
+  'pap wors and chakalaka':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pap_wors_chakalaka.jpg/800px-Pap_wors_chakalaka.jpg',
+  'dundun':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'dundun fried yam':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'ewa agoyin':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'ewa agoyin mashed beans':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'agege bread and ewa agoyin':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'rice and beans':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'rice and beans nigerian':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg',
+  'coconut rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nigerian_fried_rice.jpg/800px-Nigerian_fried_rice.jpg',
+  'indomie jollof':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/800px-Jollof_rice_in_a_white_bowl.jpg',
+  'indomie and egg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/800px-Jollof_rice_in_a_white_bowl.jpg',
+  'native jollof':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/800px-Jollof_rice_in_a_white_bowl.jpg',
+  'native jollof iwuk edesi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/800px-Jollof_rice_in_a_white_bowl.jpg',
+  'bread and egg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/800px-Akara_snack.jpg',
+  'bread and egg nigerian':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/800px-Akara_snack.jpg',
+  'bread egg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/800px-Akara_snack.jpg',
+  'cereal and milk':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/800px-Akara_snack.jpg',
+  'cereal and milk nigerian style':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/800px-Akara_snack.jpg',
+  'yam and egg sauce':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/800px-Amala_and_Abula.jpg',
+  'peppered gizzard':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/SuyavarietiesTX.JPG/800px-SuyavarietiesTX.JPG',
+  'peppered snail':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/SuyavarietiesTX.JPG/800px-SuyavarietiesTX.JPG',
+  'fisherman soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pepper_soup.jpg/800px-Pepper_soup.jpg',
+  'ekuru with stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/800px-Moin_Moin.jpg',
+  'chapman':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Chapman_drink_Nigeria.jpg/800px-Chapman_drink_Nigeria.jpg',
+  'zobo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Zobo_drink.jpg/800px-Zobo_drink.jpg',
+  'zobo hibiscus drink':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Zobo_drink.jpg/800px-Zobo_drink.jpg',
+  'yam porridge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Asaro_yam_porridge.jpg/800px-Asaro_yam_porridge.jpg',
+  'yam porridge asaro':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Asaro_yam_porridge.jpg/800px-Asaro_yam_porridge.jpg',
+  'okro soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  'okro soup ila asepo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  'groundnut soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Groundnut_soup_ghana.jpg/800px-Groundnut_soup_ghana.jpg',
+  'groundnut soup sierra leone':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Groundnut_soup_ghana.jpg/800px-Groundnut_soup_ghana.jpg',
+  'groundnut sauce uganda':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Groundnut_soup_ghana.jpg/800px-Groundnut_soup_ghana.jpg',
+  'dambu nama':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/SuyavarietiesTX.JPG/800px-SuyavarietiesTX.JPG',
+  'dambu nama shredded meat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/SuyavarietiesTX.JPG/800px-SuyavarietiesTX.JPG',
+  'cassava leaf stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  // ── North African ─────────────────────────────────────────────────────────
+  'koshari':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Koshary.jpg/800px-Koshary.jpg',
+  'kushari':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Koshary.jpg/800px-Koshary.jpg',
+  'taameya':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Taameya_Egyptian_falafel.jpg/800px-Taameya_Egyptian_falafel.jpg',
+  'taameya egyptian falafel':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Taameya_Egyptian_falafel.jpg/800px-Taameya_Egyptian_falafel.jpg',
+  'taamiya egyptian falafel':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Taameya_Egyptian_falafel.jpg/800px-Taameya_Egyptian_falafel.jpg',
+  'asida libyan':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Asida.jpg/800px-Asida.jpg',
+  'asida':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Asida.jpg/800px-Asida.jpg',
+  'bazin':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Bazeen.jpg/800px-Bazeen.jpg',
+  'sharba libiya':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chorba_frik_algerienne.jpg/800px-Chorba_frik_algerienne.jpg',
+  'sharba libiya libyan soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chorba_frik_algerienne.jpg/800px-Chorba_frik_algerienne.jpg',
+  'mahshi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mahshi_egypt.jpg/800px-Mahshi_egypt.jpg',
+  'mahshi stuffed vegetables':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mahshi_egypt.jpg/800px-Mahshi_egypt.jpg',
+  'umm ali':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Konafa.jpg/800px-Konafa.jpg',
+  'umm ali egyptian bread pudding':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Konafa.jpg/800px-Konafa.jpg',
+  'molokhia':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Molokhia-9.jpg/800px-Molokhia-9.jpg',
+  'moroccan mint tea':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Moroccan_Mint_Tea.jpg/800px-Moroccan_Mint_Tea.jpg',
+  'msemen and mint tea':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Moroccan_Mint_Tea.jpg/800px-Moroccan_Mint_Tea.jpg',
+  'mechoui':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mechoui.jpg/800px-Mechoui.jpg',
+  'mechoui roast lamb':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mechoui.jpg/800px-Mechoui.jpg',
+  'chicken tagine with preserved lemons olives':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Chicken_tagine.jpg/800px-Chicken_tagine.jpg',
+  'couscous and lamb tagine':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Couscous-1.jpg/800px-Couscous-1.jpg',
+  'couscous royale':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Couscous-1.jpg/800px-Couscous-1.jpg',
+  'couscous tunisien':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Couscous-1.jpg/800px-Couscous-1.jpg',
+  'couscous algerois':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Couscous-1.jpg/800px-Couscous-1.jpg',
+  'makroud':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Makroud.jpg/800px-Makroud.jpg',
+  'makroud semolina date cookies':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Makroud.jpg/800px-Makroud.jpg',
+  'maakouda':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Maakouda.jpg/800px-Maakouda.jpg',
+  'maakouda potato fritters':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Maakouda.jpg/800px-Maakouda.jpg',
+  'daraba':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  'daraba okra stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/800px-Ogbono_soup_with_assorted_meats.jpg',
+  // ── Southern African ──────────────────────────────────────────────────────
+  'sadza ne nyama':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sadza_ne_nyama.jpg/800px-Sadza_ne_nyama.jpg',
+  'sadza and muriwo ne nyama':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sadza_ne_nyama.jpg/800px-Sadza_ne_nyama.jpg',
+  'braai':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Braai.jpg/800px-Braai.jpg',
+  'braai south african bbq':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Braai.jpg/800px-Braai.jpg',
+  'gatsby sandwich':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gatsby_sandwich.jpg/800px-Gatsby_sandwich.jpg',
+  'gatsby':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gatsby_sandwich.jpg/800px-Gatsby_sandwich.jpg',
+  'papa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Papa_moroho.jpg/800px-Papa_moroho.jpg',
+  'papa lesotho porridge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Papa_moroho.jpg/800px-Papa_moroho.jpg',
+  'kapana':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/800px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
+  'kapana street meat':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/800px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
+  'madora':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mopane_worms.jpg/800px-Mopane_worms.jpg',
+  'madora mopane worms':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mopane_worms.jpg/800px-Mopane_worms.jpg',
+  'bogobe':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bogobe_sorghum.jpg/800px-Bogobe_sorghum.jpg',
+  'bogobe sorghum porridge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bogobe_sorghum.jpg/800px-Bogobe_sorghum.jpg',
+  'sishwala':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bogobe_sorghum.jpg/800px-Bogobe_sorghum.jpg',
+  'muboora':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'muboora pumpkin leaves':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'oshifima with omagungu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'dovi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Maf%C3%A9.jpg/800px-Maf%C3%A9.jpg',
+  'dovi peanut butter stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Maf%C3%A9.jpg/800px-Maf%C3%A9.jpg',
+  'nshima with ifisashi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'nshima kapenta and chibwabwa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'nsima with chambo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'kondowole':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'kondowole cassava nsima':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'vitumbuwa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'vitumbuwa zambian fritters':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/800px-Puff-puff3.jpg',
+  'dumboy':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'dumboy liberian fufu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'angu de banana':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'xima and caril de amendoim':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  // ── Madagascar / Indian Ocean ─────────────────────────────────────────────
+  'vary amin anana':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'ladob':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'ladob sweet banana':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'kat kat banane':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg',
+  'rougaille':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Shakshouka.jpg/800px-Shakshouka.jpg',
+  'rougaille tomato creole':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Shakshouka.jpg/800px-Shakshouka.jpg',
+  'dholl puri':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/800px-2_Chapati_warm_and_ready_to_be_eaten.jpg',
+  'langouste a la vanille':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  // ── Cameroon / Central ────────────────────────────────────────────────────
+  'koklo meme':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/800px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
+  'koklo meme grilled chicken':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/800px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg',
+  'nyembwe chicken':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Poulet_moambe.jpg/800px-Poulet_moambe.jpg',
+  // ── Cross-regional / misc ─────────────────────────────────────────────────
+  'ofada rice ayamase stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/800px-Jollof_rice_in_a_white_bowl.jpg',
+  'sambusa':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/800px-Samosa-and-Chatni.jpg',
+  'sambusa ethiopian':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/800px-Samosa-and-Chatni.jpg',
+  'piri piri chicken':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Peri_peri_chicken.jpg/800px-Peri_peri_chicken.jpg',
+  'benachin':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Benachin.jpg/800px-Benachin.jpg',
+  'benachin one-pot rice':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Benachin.jpg/800px-Benachin.jpg',
+  'achu soup and fufu yellow soup':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'achu soup fufu':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/800px-Pounded_yam.jpg',
+  'mukimo':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'matoke and groundnut sauce':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Matooke_to_the_market.jpg/800px-Matooke_to_the_market.jpg',
+  'fouti':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/To_burkina.jpg/800px-To_burkina.jpg',
+  'fouti fonio porridge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/To_burkina.jpg/800px-To_burkina.jpg',
+  'succotash de mariscos':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg',
+  'caldo de mancarra':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Maf%C3%A9.jpg/800px-Maf%C3%A9.jpg',
+  'caril de camarao':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'mbika':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
+  'mbika pumpkin seed stew':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pondu_Congo.jpg/800px-Pondu_Congo.jpg',
 };
 
 // ─── Foods where Wikipedia returns a WRONG image (different topic) ────────────
 // These keys are skipped in the Wikipedia lookup to avoid saving incorrect images.
 const BLOCKED_WIKI_KEYS = new Set([
-  'gozo',  // Wikipedia finds Gozo island (Malta), not cassava bread
-  'masa',  // Wikipedia finds Mexican masa dough, not Hausa masa/waina
+  'gozo',         // Wikipedia finds Gozo island (Malta), not cassava bread
+  'masa',         // Wikipedia finds Mexican masa dough, not Hausa masa/waina
+  'rolex',        // Wikipedia finds Rolex watch logo, not Ugandan chapati roll
+  'dodo',         // Wikipedia finds Oxford Dodo (extinct bird), not fried plantain
+  'gatsby',       // Wikipedia finds the novel/film, not the SA sandwich
+  'chapman',      // Wikipedia finds unrelated people, not Nigerian cocktail
+  'boule',        // Wikipedia finds French pétanque ball, not millet ball
+  'to',           // Too short — Wikipedia finds unrelated pages
+  'pap',          // Wikipedia finds smear test, not maize porridge
 ]);
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────

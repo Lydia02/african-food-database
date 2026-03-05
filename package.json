@@ -35,7 +35,12 @@
     "images:cache": "node migrations/validateAndFixImages.js --save-cache --dry-run",
     "images:validate": "node migrations/validateAndFixImages.js",
     "images:validate:dry": "node migrations/validateAndFixImages.js --dry-run --use-cache",
-    "backfill:manual": "node migrations/backfillMissingFoodData.js"
+    "backfill:manual": "node migrations/backfillMissingFoodData.js",
+    "images:export-csv": "node migrations/exportFoodsCSV.js",
+    "images:download": "python migrations/download_food_images.py migrations/foods.csv",
+    "images:upload": "node migrations/uploadAndUpdateImages.js",
+    "images:upload:dry": "node migrations/uploadAndUpdateImages.js --dry-run",
+    "images:pipeline": "npm run images:export-csv && npm run images:download && npm run images:upload"
   },
   "keywords": ["african-food", "recipes", "pantrypal", "firebase"],
   "author": "Lydia",

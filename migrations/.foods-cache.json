@@ -387,7 +387,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Fura_da_nono.jpg/800px-Fura_da_nono.jpg",
     "images": [],
     "tags": [
       "fura",
@@ -442,7 +441,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:24:20.943Z",
     "nutritionSource": "usda",
-    "updatedAt": "2026-02-21T19:38:22.522Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fura_da_nono.jpg/960px-Fura_da_nono.jpg",
+    "updatedAt": "2026-02-21T22:22:44.780Z"
   },
   {
     "id": "13nonrVm2t7XM6HwdPSr",
@@ -464,7 +464,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Red_Red_Ghana.jpg/800px-Red_Red_Ghana.jpg",
     "images": [],
     "tags": [
       "red-red",
@@ -518,7 +517,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:24:22.874Z",
     "nutritionSource": "usda",
-    "updatedAt": "2026-02-21T14:24:22.874Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/%22Red_Red%22_wrapped_in_Katemfe_leaves_%28Thaumatococcus_daniellii%29.jpg",
+    "updatedAt": "2026-02-21T22:22:46.430Z"
   },
   {
     "id": "1XrMIAxspipjKjOBx63B",
@@ -680,7 +680,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Kelewele.jpg/800px-Kelewele.jpg",
     "images": [],
     "tags": [
       "kelewele",
@@ -733,7 +732,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:06:20.641Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:06:20.641Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Kelewele_Seller_in_Takoradi.jpg/960px-Kelewele_Seller_in_Takoradi.jpg",
+    "updatedAt": "2026-02-21T22:22:49.106Z"
   },
   {
     "id": "212ecXUIZWHcQY94SRhX",
@@ -755,7 +755,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Moi_moi.jpg/800px-Moi_moi.jpg",
     "images": [],
     "tags": [
       "moi-moi",
@@ -815,7 +814,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:58:47.273Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T14:58:47.273Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Moin_Moin.jpg/960px-Moin_Moin.jpg",
+    "updatedAt": "2026-02-21T22:22:50.619Z"
   },
   {
     "id": "2P05giwtE9Sg20uEYVmW",
@@ -908,7 +908,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bunny_chow.jpg/960px-Bunny_chow.jpg",
     "images": [],
     "tags": [
       "bunny-chow",
@@ -967,7 +966,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:21:54.375Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T16:21:54.375Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Quarter_Mutton_Bunny_Chow.jpg/960px-Quarter_Mutton_Bunny_Chow.jpg",
+    "updatedAt": "2026-02-21T22:22:52.753Z"
   },
   {
     "id": "2v9cZJx9I6pjixOCFYqV",
@@ -1999,7 +1999,7 @@
     "nutritionEnrichedAt": "2026-02-21T15:09:21.355Z",
     "nutritionSource": "pantrypal-reference",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/960px-Pounded_yam.jpg",
-    "updatedAt": "2026-02-21T20:08:59.240Z"
+    "updatedAt": "2026-02-21T22:23:21.545Z"
   },
   {
     "id": "4vSNnVisbF5plAZKcDg3",
@@ -2027,7 +2027,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Kelewele.jpg/960px-Kelewele.jpg",
     "images": [],
     "tags": [
       "kelewele",
@@ -2080,7 +2079,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:26:16.503Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T16:26:16.503Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Kelewele_Seller_in_Takoradi.jpg/960px-Kelewele_Seller_in_Takoradi.jpg",
+    "updatedAt": "2026-02-21T22:23:23.152Z"
   },
   {
     "id": "5E4e2ryg6SfhuzwUG9Bh",
@@ -3618,7 +3618,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Banku_tilapia.jpg/800px-Banku_tilapia.jpg",
     "images": [],
     "tags": [
       "banku",
@@ -3672,7 +3671,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:11:24.055Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:11:24.055Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kenkey_and_ground_pepper_with_sardine.jpg/960px-Kenkey_and_ground_pepper_with_sardine.jpg",
+    "updatedAt": "2026-02-21T22:24:16.955Z"
   },
   {
     "id": "7lAlb1AkphDpBu0Gb0VD",
@@ -3811,7 +3811,7 @@
     "nutritionEnrichedAt": "2026-02-21T17:11:20.963Z",
     "nutritionSource": "pantrypal-reference",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Palm_wine.jpg/960px-Palm_wine.jpg",
-    "updatedAt": "2026-02-21T20:10:02.192Z"
+    "updatedAt": "2026-02-21T22:24:21.802Z"
   },
   {
     "id": "7w9c4UijTbUavNz8UAoR",
@@ -4207,7 +4207,7 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:32:37.074Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T20:10:14.628Z"
+    "updatedAt": "2026-02-21T22:24:30.186Z"
   },
   {
     "id": "99j8iGTj0ukfm9idWZNG",
@@ -5138,7 +5138,7 @@
     "nutritionEnrichedAt": "2026-02-21T15:13:58.268Z",
     "nutritionSource": "pantrypal-reference",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/960px-Jollof_rice_in_a_white_bowl.jpg",
-    "updatedAt": "2026-02-21T20:10:40.929Z"
+    "updatedAt": "2026-02-21T22:24:54.705Z"
   },
   {
     "id": "AlTViEyZFhaYDaCuZd6y",
@@ -5216,7 +5216,7 @@
     "nutritionEnrichedAt": "2026-02-21T15:13:59.897Z",
     "nutritionSource": "pantrypal-reference",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Chin_Chin_Snack.jpg/960px-Chin_Chin_Snack.jpg",
-    "updatedAt": "2026-02-21T20:10:42.059Z"
+    "updatedAt": "2026-02-21T22:24:56.056Z"
   },
   {
     "id": "AuLSGUGlBY7Vz8RkIbCc",
@@ -6388,8 +6388,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:24.643Z",
     "nutritionSource": "pantrypal-reference",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Zanzibari_pizza_Chips_Mayai.jpg/960px-Zanzibari_pizza_Chips_Mayai.jpg",
-    "updatedAt": "2026-02-21T19:40:28.103Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zee%29.jpg/960px-Chipsi_mayai_%28zee%29.jpg",
+    "updatedAt": "2026-02-21T22:25:24.367Z"
   },
   {
     "id": "DakBLyAcsTZ1p4t1kXoZ",
@@ -6728,7 +6728,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Brik.jpg/800px-Brik.jpg",
     "images": [],
     "tags": [
       "brik",
@@ -6785,7 +6784,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:15:42.808Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:15:42.808Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Brikdish.jpg/960px-Brikdish.jpg",
+    "updatedAt": "2026-02-21T22:25:39.993Z"
   },
   {
     "id": "EKKYEiEqXqsJNjz5zyPp",
@@ -7793,7 +7793,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pounded_yam_and_egusi.jpg/800px-Pounded_yam_and_egusi.jpg",
     "images": [],
     "tags": [
       "pounded-yam",
@@ -7842,7 +7841,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:16:52.224Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:16:52.224Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Iyan_%26_Efo-Riro_%28737053836%29.jpg/960px-Iyan_%26_Efo-Riro_%28737053836%29.jpg",
+    "updatedAt": "2026-02-21T22:26:14.907Z"
   },
   {
     "id": "Gl2nRGWQa9l6C0WQcinH",
@@ -8339,7 +8339,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Isi_ewu.jpg/800px-Isi_ewu.jpg",
     "images": [],
     "tags": [
       "isi-ewu",
@@ -8397,7 +8396,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:44:04.001Z",
     "nutritionSource": "usda",
-    "updatedAt": "2026-02-21T19:41:11.923Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Isi_ewu.jpg/960px-Isi_ewu.jpg",
+    "updatedAt": "2026-02-21T22:26:31.419Z"
   },
   {
     "id": "I2Iq0beeAP7xWdyRaXXs",
@@ -8509,7 +8509,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Alicha_1.jpg/960px-Alicha_1.jpg",
     "images": [],
     "tags": [
       "shiro",
@@ -8564,7 +8563,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:44:05.151Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T16:44:05.151Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Taita_and_shiro.jpg/960px-Taita_and_shiro.jpg",
+    "updatedAt": "2026-02-21T22:26:33.804Z"
   },
   {
     "id": "IjlHKa8exrExjm3pTsVo",
@@ -8662,7 +8662,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Okpa.jpg/800px-Okpa.jpg",
     "images": [],
     "tags": [
       "okpa",
@@ -8718,7 +8717,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:27.131Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:41:19.760Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Okpa_di_Oku.jpg",
+    "updatedAt": "2026-02-21T22:26:40.735Z"
   },
   {
     "id": "JOo8xJDbH5uhcUyp8GSz",
@@ -8888,7 +8888,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Kenkey_fried_fish.jpg/800px-Kenkey_fried_fish.jpg",
     "images": [],
     "tags": [
       "kenkey",
@@ -8939,7 +8938,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:19:00.104Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:19:00.104Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kenkey_and_ground_pepper_with_sardine.jpg/960px-Kenkey_and_ground_pepper_with_sardine.jpg",
+    "updatedAt": "2026-02-21T22:26:47.230Z"
   },
   {
     "id": "JtWpu7yN3nvR8WK64uUu",
@@ -9192,7 +9192,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Pastilla.jpg/800px-Pastilla.jpg",
     "images": [],
     "tags": [
       "pastilla",
@@ -9252,7 +9251,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:19:09.060Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:19:09.060Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Bisteeya.jpg",
+    "updatedAt": "2026-02-21T22:26:54.025Z"
   },
   {
     "id": "KKpZsz2bqlFjstQqhEeY",
@@ -9272,7 +9272,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ghanaian_Jollof.jpg/800px-Ghanaian_Jollof.jpg",
     "images": [],
     "tags": [
       "jollof",
@@ -9331,7 +9330,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:19:10.312Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:19:10.312Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jollof_rice_in_a_white_bowl.jpg/960px-Jollof_rice_in_a_white_bowl.jpg",
+    "updatedAt": "2026-02-21T22:26:55.464Z"
   },
   {
     "id": "KUXMCnTv4tjHuEm6b83r",
@@ -9361,7 +9361,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Samosa_1.jpg/960px-Samosa_1.jpg",
     "images": [],
     "tags": [
       "samosa",
@@ -9410,7 +9409,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:45:38.037Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T16:45:38.037Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/960px-Samosa-and-Chatni.jpg",
+    "updatedAt": "2026-02-21T22:26:58.901Z"
   },
   {
     "id": "KvtiDJceHE6J7VEVN7k6",
@@ -9667,7 +9667,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Thieboudienne.jpg/800px-Thieboudienne.jpg",
     "images": [],
     "tags": [
       "thieboudienne",
@@ -9721,7 +9720,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:19:59.989Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T15:19:59.989Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Thieboudienne.JPG/960px-Thieboudienne.JPG",
+    "updatedAt": "2026-02-21T22:27:07.198Z"
   },
   {
     "id": "Ls3srOAPKMSrGbRoJZpV",
@@ -9942,7 +9942,7 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:46:54.078Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T16:46:54.078Z"
+    "updatedAt": "2026-02-21T22:27:14.958Z"
   },
   {
     "id": "ME2o7OewbUByxbVj7N7E",
@@ -9963,7 +9963,6 @@
       "young-professionals",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bunny_chow.jpg/800px-Bunny_chow.jpg",
     "images": [],
     "tags": [
       "bunny-chow",
@@ -10023,7 +10022,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:20:16.426Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:20:16.426Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Quarter_Mutton_Bunny_Chow.jpg/960px-Quarter_Mutton_Bunny_Chow.jpg",
+    "updatedAt": "2026-02-21T22:27:16.552Z"
   },
   {
     "id": "MF8FlZJTvsJSsWVhRAzM",
@@ -10726,7 +10726,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ugali_%26_Sukuma_Wiki.jpg/800px-Ugali_%26_Sukuma_Wiki.jpg",
     "images": [],
     "tags": [
       "ugali",
@@ -10778,7 +10777,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:21:49.209Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:21:49.209Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg",
+    "updatedAt": "2026-02-21T22:27:38.360Z"
   },
   {
     "id": "OQSoI6n9RJudjOvDJUVY",
@@ -11028,7 +11028,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Luwombo.jpg/800px-Luwombo.jpg",
     "images": [],
     "tags": [
       "luwombo",
@@ -11083,7 +11082,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:22:16.900Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:22:16.900Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Chicken_Luwombo.JPG/960px-Chicken_Luwombo.JPG",
+    "updatedAt": "2026-02-21T22:27:50.923Z"
   },
   {
     "id": "P6v7bnEGrhxAxtJkobRo",
@@ -11922,7 +11922,6 @@
       "young-professionals",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Nkwobi.jpg/800px-Nkwobi.jpg",
     "images": [],
     "tags": [
       "nkwobi",
@@ -11981,7 +11980,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:30.671Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:42:31.651Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Nkwobi_made_with_Chevon.jpg",
+    "updatedAt": "2026-02-21T22:28:18.767Z"
   },
   {
     "id": "QqS8Daa9llDgHjVgbvtY",
@@ -12172,7 +12172,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Puff-puff.jpg/800px-Puff-puff.jpg",
     "images": [],
     "tags": [
       "puff-puff",
@@ -12229,7 +12228,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:24:24.555Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:24:24.555Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puff-puff3.jpg/960px-Puff-puff3.jpg",
+    "updatedAt": "2026-02-21T22:28:21.616Z"
   },
   {
     "id": "RZ1SASBdyx8C1tuzSpWd",
@@ -12324,7 +12324,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Thieboudienne.jpg/800px-Thieboudienne.jpg",
     "images": [],
     "tags": [
       "thieboudienne",
@@ -12382,7 +12381,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:24:50.498Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T15:24:50.498Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Thieboudienne.JPG/960px-Thieboudienne.JPG",
+    "updatedAt": "2026-02-21T22:28:25.724Z"
   },
   {
     "id": "RfDLxANZQkULHtaZq9kB",
@@ -12402,7 +12402,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Nyama_choma.jpg/800px-Nyama_choma.jpg",
     "images": [],
     "tags": [
       "nyama-choma",
@@ -12452,7 +12451,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:24:51.747Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:24:51.747Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg/960px-Nyama_Choma_%28BBQ_the_Kenyan_way%29.jpg",
+    "updatedAt": "2026-02-21T22:28:27.168Z"
   },
   {
     "id": "RgCWN4paLPtELdQC9BUB",
@@ -12545,7 +12545,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Amala_and_efo_riro.jpg/800px-Amala_and_efo_riro.jpg",
     "images": [],
     "tags": [
       "amala",
@@ -12595,7 +12594,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:25:11.606Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:25:11.606Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amala_and_Abula.jpg/960px-Amala_and_Abula.jpg",
+    "updatedAt": "2026-02-21T22:28:32.544Z"
   },
   {
     "id": "S90yZKc4ABZNGFSny9fo",
@@ -12616,7 +12616,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Fufu_congolese.jpg/800px-Fufu_congolese.jpg",
     "images": [],
     "tags": [
       "fufu",
@@ -12666,7 +12665,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:25:12.794Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:25:12.794Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pounded_yam.jpg/960px-Pounded_yam.jpg",
+    "updatedAt": "2026-02-21T22:28:33.856Z"
   },
   {
     "id": "SEYreX1Ci2HdWSimkIgK",
@@ -12913,7 +12913,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ful_medames.jpg/800px-Ful_medames.jpg",
     "images": [],
     "tags": [
       "ful",
@@ -12967,7 +12966,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:25:38.120Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:25:38.120Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/960px-Ful_medames_%28arabic_meal%29.jpg",
+    "updatedAt": "2026-02-21T22:28:42.177Z"
   },
   {
     "id": "TKIY7gIMMta36Fswunp2",
@@ -13079,7 +13079,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kunu_drink.jpg/800px-Kunu_drink.jpg",
     "images": [],
     "tags": [
       "kunu",
@@ -13135,7 +13134,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:25:39.335Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:25:39.335Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Kunu.jpg",
+    "updatedAt": "2026-02-21T22:28:46.453Z"
   },
   {
     "id": "Tjoyi6opPOgPwIG4Kp4Y",
@@ -13157,7 +13157,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ful_medames.jpg/800px-Ful_medames.jpg",
     "images": [],
     "tags": [
       "ful-medames",
@@ -13212,7 +13211,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:25:40.558Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:25:40.558Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ful_medames_%28arabic_meal%29.jpg/960px-Ful_medames_%28arabic_meal%29.jpg",
+    "updatedAt": "2026-02-21T22:28:47.476Z"
   },
   {
     "id": "TnGXe6yZojOQoSOB9p7O",
@@ -13732,7 +13732,7 @@
     "nutritionEnrichedAt": "2026-02-21T17:11:32.347Z",
     "nutritionSource": "pantrypal-reference",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Shakshouka.jpg/960px-Shakshouka.jpg",
-    "updatedAt": "2026-02-21T19:43:10.215Z"
+    "updatedAt": "2026-02-21T22:29:09.541Z"
   },
   {
     "id": "Ugm7irxuiNSajeio7YZ7",
@@ -13833,7 +13833,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Akara.jpg/800px-Akara.jpg",
     "images": [],
     "tags": [
       "akara",
@@ -13888,7 +13887,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:28:06.865Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:28:06.865Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Akara_snack.jpg/960px-Akara_snack.jpg",
+    "updatedAt": "2026-02-21T22:29:18.053Z"
   },
   {
     "id": "VVYNz8xoP88n2nUROHrz",
@@ -13910,7 +13910,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ugali_%26_Sukuma_Wiki.jpg/800px-Ugali_%26_Sukuma_Wiki.jpg",
     "images": [],
     "tags": [
       "ugali",
@@ -13964,7 +13963,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:28:08.168Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:28:08.168Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg",
+    "updatedAt": "2026-02-21T22:29:19.222Z"
   },
   {
     "id": "VedComer6swUx5gvTEmu",
@@ -14061,7 +14061,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chapati_kenya.jpg/800px-Chapati_kenya.jpg",
     "images": [],
     "tags": [
       "chapati",
@@ -14111,7 +14110,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:31:11.793Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T14:31:11.793Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/960px-2_Chapati_warm_and_ready_to_be_eaten.jpg",
+    "updatedAt": "2026-02-21T22:29:28.375Z"
   },
   {
     "id": "Vk7MV5lFibALrno8lRUb",
@@ -14898,7 +14898,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Domoda_gambia.jpg/800px-Domoda_gambia.jpg",
     "images": [],
     "tags": [
       "domoda",
@@ -14951,7 +14950,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:34.418Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:43:36.358Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Domoda_Senegal.jpg/960px-Domoda_Senegal.jpg",
+    "updatedAt": "2026-02-21T22:30:01.590Z"
   },
   {
     "id": "XyfR0WfF7N1y0hZNic83",
@@ -14971,7 +14971,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Samosa_1.jpg/800px-Samosa_1.jpg",
     "images": [],
     "tags": [
       "samosa",
@@ -15026,7 +15025,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:31:35.718Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T14:31:35.718Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/960px-Samosa-and-Chatni.jpg",
+    "updatedAt": "2026-02-21T22:30:05.717Z"
   },
   {
     "id": "Y4bpjAzKS24xXijwZxTg",
@@ -15221,7 +15221,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Dambu_nama.jpg/800px-Dambu_nama.jpg",
     "images": [],
     "tags": [
       "dambou",
@@ -15271,7 +15270,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:34.854Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:43:41.676Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Dambu.jpg/960px-Dambu.jpg",
+    "updatedAt": "2026-02-21T22:30:12.653Z"
   },
   {
     "id": "YPZMoKBN4hqVjOiE1iyY",
@@ -15368,7 +15368,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Ethiopian_fasting_food.jpg/800px-Ethiopian_fasting_food.jpg",
     "images": [],
     "tags": [
       "beyaynetu",
@@ -15423,7 +15422,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:35.226Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:43:45.263Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Beyaynetu.JPG/960px-Beyaynetu.JPG",
+    "updatedAt": "2026-02-21T22:30:19.552Z"
   },
   {
     "id": "Yfig1dkJfWLnCU0YTHPk",
@@ -15445,7 +15445,6 @@
       "young-professionals",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hawawshi.jpg/800px-Hawawshi.jpg",
     "images": [],
     "tags": [
       "hawawshi",
@@ -15501,7 +15500,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:35.686Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:43:46.886Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Egyptian_meatloaf.jpg/960px-Egyptian_meatloaf.jpg",
+    "updatedAt": "2026-02-21T22:30:23.421Z"
   },
   {
     "id": "YmXUATOHA3Pj7ZiyDXNp",
@@ -15609,7 +15609,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Dan_wake.jpg/800px-Dan_wake.jpg",
     "images": [],
     "tags": [
       "dan-wake",
@@ -15666,7 +15665,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T16:58:09.618Z",
     "nutritionSource": "usda",
-    "updatedAt": "2026-02-21T19:43:49.584Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hausa_Food_Dan_wake_01.jpg/960px-Hausa_Food_Dan_wake_01.jpg",
+    "updatedAt": "2026-02-21T22:30:27.828Z"
   },
   {
     "id": "ZCtMgcJX5mZ22alk5raW",
@@ -15686,7 +15686,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Egusi_Soup.jpg/1200px-Egusi_Soup.jpg",
     "images": [],
     "tags": [
       "egusi",
@@ -15747,7 +15746,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:33:25.712Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:33:25.712Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Egusi_Soup2.jpg/960px-Egusi_Soup2.jpg",
+    "updatedAt": "2026-02-21T22:30:29.479Z"
   },
   {
     "id": "ZnuwZLfl8EwkNIQiyLuO",
@@ -15920,7 +15920,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Somali_rice.jpg/800px-Somali_rice.jpg",
     "images": [],
     "tags": [
       "bariis",
@@ -15976,7 +15975,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:37.354Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:43:56.459Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg/960px-Djiboutian_rice_%28bariis%29_and_fish_%28kalluun%29%2C_Liver_%28beerka%29_with_vegetable_also_%28Sabaayad%29_pancakes.jpg",
+    "updatedAt": "2026-02-21T22:30:39.129Z"
   },
   {
     "id": "a5FzhOL4cLFLu4JWcYcI",
@@ -15996,7 +15996,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Koeksister.jpg/800px-Koeksister.jpg",
     "images": [],
     "tags": [
       "koeksister",
@@ -16051,7 +16050,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:34:31.061Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:43:58.011Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Koeksisters.jpg",
+    "updatedAt": "2026-02-21T22:30:42.969Z"
   },
   {
     "id": "a6kqCkBtsbre1igV3bBN",
@@ -16304,7 +16304,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Matooke.jpg/800px-Matooke.jpg",
     "images": [],
     "tags": [
       "matoke",
@@ -16352,7 +16351,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:35:03.303Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:35:03.303Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Matooke_to_the_market.jpg/960px-Matooke_to_the_market.jpg",
+    "updatedAt": "2026-02-21T22:30:53.563Z"
   },
   {
     "id": "aTcBbURUIGez7byusa1F",
@@ -16523,7 +16523,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg",
     "images": [],
     "tags": [
       "beans",
@@ -16578,7 +16577,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:35:30.745Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:35:30.745Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:31:03.491Z"
   },
   {
     "id": "acwRMb0AyEMTLWr3yPiX",
@@ -17186,7 +17186,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Amala_and_efo_riro.jpg",
     "images": [],
     "tags": [
       "efo-riro",
@@ -17246,7 +17245,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:37:03.276Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:37:03.276Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg/960px-Efo_Riro_with_fried_mackerel_fishes_and_roasted_cowskin.jpg",
+    "updatedAt": "2026-02-21T22:31:24.380Z"
   },
   {
     "id": "cWbvSJaqYPsxMjGmL2gj",
@@ -17817,7 +17817,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rolex_uganda.jpg/800px-Rolex_uganda.jpg",
     "images": [],
     "tags": [
       "rolex",
@@ -17871,7 +17870,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:37:40.263Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:37:40.263Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rolex_wrap.jpg/960px-Rolex_wrap.jpg",
+    "updatedAt": "2026-02-21T22:31:40.778Z"
   },
   {
     "id": "eDKFlBzWvLcCjBnjSSvF",
@@ -17894,7 +17894,6 @@
       "young-professionals",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Shawarma.jpg/800px-Shawarma.jpg",
     "images": [],
     "tags": [
       "shawarma",
@@ -17947,7 +17946,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T14:34:17.746Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:44:40.613Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/%D0%A8%D0%B0%D1%83%D1%80%D0%BC%D0%B0_6.jpg/960px-%D0%A8%D0%B0%D1%83%D1%80%D0%BC%D0%B0_6.jpg",
+    "updatedAt": "2026-02-21T22:31:46.603Z"
   },
   {
     "id": "eQOkWb55xwulR70IXjnr",
@@ -17979,7 +17979,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Baked_plantain.jpg/960px-Baked_plantain.jpg",
     "images": [],
     "tags": [
       "bole",
@@ -18028,7 +18027,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:04:42.041Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:44:41.671Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:31:47.702Z"
   },
   {
     "id": "eReZMMtMw0Rdpg4cGvYV",
@@ -18210,7 +18210,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Banku_and_tilapia.jpg/800px-Banku_and_tilapia.jpg",
     "images": [],
     "tags": [
       "banku",
@@ -18262,7 +18261,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:38:00.665Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:38:00.665Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kenkey_and_ground_pepper_with_sardine.jpg/960px-Kenkey_and_ground_pepper_with_sardine.jpg",
+    "updatedAt": "2026-02-21T22:31:53.249Z"
   },
   {
     "id": "es189eBL7HiyrtK6Hn9M",
@@ -18358,7 +18358,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Fried_plantain.jpg/800px-Fried_plantain.jpg",
     "images": [],
     "tags": [
       "dodo",
@@ -18407,7 +18406,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:39:02.982Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:39:02.982Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:31:59.212Z"
   },
   {
     "id": "fIgnAQ3NwQHGLjW5pzhr",
@@ -18979,7 +18979,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Zanzibari_pizza_Chips_Mayai.jpg/960px-Zanzibari_pizza_Chips_Mayai.jpg",
     "images": [],
     "tags": [
       "chipsi-mayai",
@@ -19031,7 +19030,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:41.166Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:45:01.226Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zee%29.jpg/960px-Chipsi_mayai_%28zee%29.jpg",
+    "updatedAt": "2026-02-21T22:32:15.133Z"
   },
   {
     "id": "gIMrqWmOVdyniPNkr2qy",
@@ -19670,7 +19670,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Afang_soup.jpg/800px-Afang_soup.jpg",
     "images": [],
     "tags": [
       "afang",
@@ -19729,7 +19728,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:40:54.054Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:40:54.054Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Afang_Soup.jpg/960px-Afang_Soup.jpg",
+    "updatedAt": "2026-02-21T22:32:30.327Z"
   },
   {
     "id": "i36rDS0bZXe2OafxlBGW",
@@ -19895,7 +19895,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Yassa_poulet.jpg/800px-Yassa_poulet.jpg",
     "images": [],
     "tags": [
       "yassa",
@@ -19952,7 +19951,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:41:13.493Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:41:13.493Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Poulet_Yassa_Chicken_rice_with_onion_sauce.jpg/960px-Poulet_Yassa_Chicken_rice_with_onion_sauce.jpg",
+    "updatedAt": "2026-02-21T22:32:36.792Z"
   },
   {
     "id": "iNMtDdSduSBx31blPlAI",
@@ -19973,7 +19973,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Seswaa.jpg/800px-Seswaa.jpg",
     "images": [],
     "tags": [
       "seswaa",
@@ -20020,7 +20019,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:41.987Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:45:22.384Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Seswaa.jpg/960px-Seswaa.jpg",
+    "updatedAt": "2026-02-21T22:32:41.211Z"
   },
   {
     "id": "iXicckAbbEXUfL8sKPR8",
@@ -20039,7 +20039,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Malva_pudding.jpg/800px-Malva_pudding.jpg",
     "images": [],
     "tags": [
       "malva",
@@ -20095,7 +20094,8 @@
       "vitaminC": ""
     },
     "nutritionEnrichedAt": "2026-02-21T17:08:17.411Z",
-    "updatedAt": "2026-02-21T19:45:23.873Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Malva_Pudding.jpg/960px-Malva_Pudding.jpg",
+    "updatedAt": "2026-02-21T22:32:43.249Z"
   },
   {
     "id": "igI3pgcU5jdG55zyNpt3",
@@ -20193,7 +20193,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Shito_sauce.jpg/800px-Shito_sauce.jpg",
     "images": [],
     "tags": [
       "shito",
@@ -20250,7 +20249,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:42:37.710Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:42:37.710Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Fante_Kenkey_with_Sardine_and_Shito.jpg/960px-Fante_Kenkey_with_Sardine_and_Shito.jpg",
+    "updatedAt": "2026-02-21T22:32:48.336Z"
   },
   {
     "id": "inxBlZD8mAVO5JYaK7uG",
@@ -20571,7 +20571,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Chakhchoukha.jpg/800px-Chakhchoukha.jpg",
     "images": [],
     "tags": [
       "chakhchoukha",
@@ -20625,7 +20624,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:43:51.580Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:45:36.770Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Algerian_Chakhchoukha.jpg",
+    "updatedAt": "2026-02-21T22:33:00.235Z"
   },
   {
     "id": "jbYaci5mleSuEBqvFwrw",
@@ -20783,7 +20783,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Rolex_uganda.jpg/800px-Rolex_uganda.jpg",
     "images": [],
     "tags": [
       "rolex",
@@ -20839,7 +20838,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:44:20.706Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:44:20.706Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rolex_wrap.jpg/960px-Rolex_wrap.jpg",
+    "updatedAt": "2026-02-21T22:33:06.898Z"
   },
   {
     "id": "jzxgxVeMdFgmR5kmB4Ir",
@@ -21012,7 +21012,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alloco.jpg/800px-Alloco.jpg",
     "images": [],
     "tags": [
       "alloco",
@@ -21062,7 +21061,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:45:24.256Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:45:24.256Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:33:15.219Z"
   },
   {
     "id": "kc2ENBBbh4Kad9l7m6yp",
@@ -21416,7 +21416,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Boli_roasted_plantain.jpg/800px-Boli_roasted_plantain.jpg",
     "images": [],
     "tags": [
       "boli",
@@ -21465,7 +21464,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:45:43.739Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:45:56.406Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:33:24.330Z"
   },
   {
     "id": "lHuG0CcilO7k2HA66a64",
@@ -21485,7 +21485,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Asida.jpg/800px-Asida.jpg",
     "images": [],
     "tags": [
       "asida",
@@ -21536,7 +21535,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:45:44.998Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:45:44.998Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/%D8%B9%D8%B5%D9%8A%D8%AF%D8%A9-%D9%82%D8%B7%D9%8A%D9%81%D9%8A%D8%A9.jpg/960px-%D8%B9%D8%B5%D9%8A%D8%AF%D8%A9-%D9%82%D8%B7%D9%8A%D9%81%D9%8A%D8%A9.jpg",
+    "updatedAt": "2026-02-21T22:33:28.468Z"
   },
   {
     "id": "lfyPINKMAG2VFswPkd4v",
@@ -22162,7 +22162,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Abacha_nri.jpg/800px-Abacha_nri.jpg",
     "images": [],
     "tags": [
       "abacha",
@@ -22221,7 +22220,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:43.282Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:46:12.425Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/African_salad_mostly_prepared_by_the_southeastern_part_of_Nigeria_especially_in_the_eastern_part._This_meal_is_mostly_prepared_during_festive_seasons_like_new_yam_festival_or_marriage_ceremony.jpg",
+    "updatedAt": "2026-02-21T22:33:51.847Z"
   },
   {
     "id": "n0mf4yZ6LihpiD65ztO2",
@@ -22615,7 +22615,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beans_and_plantain.jpg/800px-Beans_and_plantain.jpg",
     "images": [],
     "tags": [
       "beans",
@@ -22672,7 +22671,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:48:39.132Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:48:39.132Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:34:04.685Z"
   },
   {
     "id": "nrRTBdelzPtipSQlSRrV",
@@ -22692,7 +22692,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ogbono_soup.jpg/800px-Ogbono_soup.jpg",
     "images": [],
     "tags": [
       "ogbono",
@@ -22750,7 +22749,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:48:40.350Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:48:40.350Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ogbono_soup_with_assorted_meats.jpg/960px-Ogbono_soup_with_assorted_meats.jpg",
+    "updatedAt": "2026-02-21T22:34:06.169Z"
   },
   {
     "id": "o0HBxJI76Mhque5X41cW",
@@ -23146,7 +23146,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fried_plantain_african.jpg/800px-Fried_plantain_african.jpg",
     "images": [],
     "tags": [
       "makemba",
@@ -23196,7 +23195,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:45.304Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:46:35.507Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:34:23.693Z"
   },
   {
     "id": "r3eZTWaDTVP5uVyzCYS4",
@@ -23374,7 +23374,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Beans_plantain.jpg/800px-Beans_plantain.jpg",
     "images": [],
     "tags": [
       "beans",
@@ -23422,7 +23421,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:52:19.718Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:52:19.718Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aloko.jpg/960px-Aloko.jpg",
+    "updatedAt": "2026-02-21T22:34:29.725Z"
   },
   {
     "id": "rxJfLTvvjoWtxPDKwLtG",
@@ -23518,7 +23518,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Chapati_beans.jpg/800px-Chapati_beans.jpg",
     "images": [],
     "tags": [
       "chapati",
@@ -23567,7 +23566,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:52:53.620Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:52:53.620Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/960px-2_Chapati_warm_and_ready_to_be_eaten.jpg",
+    "updatedAt": "2026-02-21T22:34:34.801Z"
   },
   {
     "id": "sMqU97r2Q5CXPKnZqhhu",
@@ -23587,7 +23587,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Vetkoek_mince.jpg/800px-Vetkoek_mince.jpg",
     "images": [],
     "tags": [
       "vetkoek",
@@ -23634,7 +23633,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:52:54.841Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:52:54.841Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vetkoek_with_mince-001.jpg/960px-Vetkoek_with_mince-001.jpg",
+    "updatedAt": "2026-02-21T22:34:36.260Z"
   },
   {
     "id": "sQfBx0QtYlD6k8T9X77A",
@@ -23655,7 +23655,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Kenkey_and_fish.jpg/800px-Kenkey_and_fish.jpg",
     "images": [],
     "tags": [
       "kenkey",
@@ -23707,7 +23706,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:52:56.226Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:52:56.226Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kenkey_and_ground_pepper_with_sardine.jpg/960px-Kenkey_and_ground_pepper_with_sardine.jpg",
+    "updatedAt": "2026-02-21T22:34:37.319Z"
   },
   {
     "id": "sRR9GDhVChQbKXRUAKpZ",
@@ -24100,7 +24100,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Thieboudienne.jpg/800px-Thieboudienne.jpg",
     "images": [],
     "tags": [
       "thieboudienne",
@@ -24158,7 +24157,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:53:48.788Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T15:53:48.788Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Thieboudienne.JPG/960px-Thieboudienne.JPG",
+    "updatedAt": "2026-02-21T22:34:52.559Z"
   },
   {
     "id": "tvVAFR5aQsl76BiIaG1F",
@@ -24767,7 +24767,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Chorba_frik.jpg/800px-Chorba_frik.jpg",
     "images": [],
     "tags": [
       "chorba",
@@ -24824,7 +24823,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:54:23.984Z",
     "nutritionSource": "openfoodfacts",
-    "updatedAt": "2026-02-21T19:47:20.811Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chorba_frik_algerienne.jpg/960px-Chorba_frik_algerienne.jpg",
+    "updatedAt": "2026-02-21T22:35:08.888Z"
   },
   {
     "id": "uotvRvjVs561CLIr8D0q",
@@ -24915,7 +24915,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Kitfo.jpg/800px-Kitfo.jpg",
     "images": [],
     "tags": [
       "kitfo",
@@ -24966,7 +24965,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:54:47.903Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:54:47.903Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Kitfo_with_Ayibe..JPG",
+    "updatedAt": "2026-02-21T22:35:15.977Z"
   },
   {
     "id": "uwiHl0UV2YwXydhe7ZqZ",
@@ -25441,7 +25441,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kissar_crepe.jpg/800px-Kissar_crepe.jpg",
     "images": [],
     "tags": [
       "kissar",
@@ -25492,7 +25491,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:52.428Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:47:34.015Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kissar.JPG/960px-Kissar.JPG",
+    "updatedAt": "2026-02-21T22:35:31.201Z"
   },
   {
     "id": "vWfnXOx6W74zJxpvleef",
@@ -25808,7 +25808,6 @@
       "university-students",
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lablabi.jpg/800px-Lablabi.jpg",
     "images": [],
     "tags": [
       "lablabi",
@@ -25866,7 +25865,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:11:54.112Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T19:47:42.348Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bol_de_Leblabi_de_Tunisie%2C_21_mars_2017.jpg/960px-Bol_de_Leblabi_de_Tunisie%2C_21_mars_2017.jpg",
+    "updatedAt": "2026-02-21T22:35:43.368Z"
   },
   {
     "id": "wSD69ss2Cx9WRUVFotal",
@@ -26483,7 +26483,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kedjenou.jpg/800px-Kedjenou.jpg",
     "images": [],
     "tags": [
       "kedjenou",
@@ -26539,7 +26538,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T17:25:56.324Z",
     "nutritionSource": "usda",
-    "updatedAt": "2026-02-21T19:47:54.131Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Kedjenou_-_01.jpg/960px-Kedjenou_-_01.jpg",
+    "updatedAt": "2026-02-21T22:36:00.842Z"
   },
   {
     "id": "yPsT2xlSa4UAQfhiREHF",
@@ -26800,7 +26800,6 @@
     "targetAudience": [
       "everyone"
     ],
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ugali_sukuma.jpg/800px-Ugali_sukuma.jpg",
     "images": [],
     "tags": [
       "ugali",
@@ -26853,7 +26852,8 @@
     },
     "nutritionEnrichedAt": "2026-02-21T15:57:42.416Z",
     "nutritionSource": "pantrypal-reference",
-    "updatedAt": "2026-02-21T15:57:42.416Z"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ugali_%26_Sukuma_Wiki.jpg/960px-Ugali_%26_Sukuma_Wiki.jpg",
+    "updatedAt": "2026-02-21T22:36:09.902Z"
   },
   {
     "id": "ypIVXxXWK1V8TEdKnqkL",
