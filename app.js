@@ -90,6 +90,11 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+app.post('/api/cache/refresh', (req, res) => {
+  foodCache.invalidate();
+  res.json({ success: true, message: 'Cache cleared. Next request will reload fresh data from Firestore.' });
+});
+
 // ─── API routes ────────────────────────────────────────────────
 app.use('/api/countries', countryRoutes);
 app.use('/api/regions', regionRoutes);
